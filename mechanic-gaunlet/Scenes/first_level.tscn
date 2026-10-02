@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_aqlmp"]
 [ext_resource type="PackedScene" uid="uid://dxh8id0537vft" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
 [ext_resource type="PackedScene" uid="uid://b8o7wkpeujrfh" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
+[ext_resource type="PackedScene" uid="uid://dy7omfv14myq6" path="res://Scenes/basic_polygon.tscn" id="5_kin1b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ccbq8"]
 
@@ -81,4 +82,15 @@ position = Vector2(205, 575)
 scale = Vector2(0.53125, 1.015625)
 
 [node name="Background_Shape" parent="." unique_id=523277365 instance=ExtResource("4_kin1b")]
-position = Vector2(1010, 359)
+position = Vector2(1000, 359)
+scale = Vector2(11.225353, 4.188405)
+polygon = PackedVector2Array(0, 0, 82.759094, -0.7162628, 82.848175, 70.19378, 57.013794, 72.82009, 49.53073, 55.391014, 63.78418, 14.08651, 52.737762, 20.532875, 39.28607, 17.42907, 41.51317, 48.94465, 70, 69, 34.055115, 69.000015, 11.402756, 69.23876, 15.144287, 64.70243, 32.970123, 64.547104, 23.874527, 27.217995, 15.678795, 69.477516, 0, 69)
+
+[node name="Basic_Polygon2" parent="." unique_id=180868676 instance=ExtResource("5_kin1b")]
+scale = Vector2(1.7777778, 1.5555556)
+polygon = PackedVector2Array(0, 0, 9, 0, 4.5, 4.5, 0, 9)
+
+[node name="Basic_Polygon" parent="." unique_id=840584801 instance=ExtResource("5_kin1b")]
+position = Vector2(1991, 528)
+polygon = PackedVector2Array(-51, 7, 9, 0, 46, 81, -52, 77)
+uv = PackedVector2Array(0, 0, 9, 0, 46, 81, -52, 77)
