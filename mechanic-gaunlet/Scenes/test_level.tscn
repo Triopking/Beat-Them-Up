@@ -67,6 +67,16 @@ position = Vector2(199.5, 545.5)
 scale = Vector2(2.546875, 3.1406248)
 texture = SubResource("GradientTexture2D_8ie3n")
 
+[node name="Sprite2D7" type="Sprite2D" parent="House" unique_id=2064248353]
+position = Vector2(46.5, 453.5)
+scale = Vector2(2.546875, 3.1406248)
+texture = SubResource("GradientTexture2D_8ie3n")
+
+[node name="Sprite2D8" type="Sprite2D" parent="House" unique_id=689300846]
+position = Vector2(-95.5, 339.5)
+scale = Vector2(2.546875, 3.1406248)
+texture = SubResource("GradientTexture2D_8ie3n")
+
 [node name="Sprite2D4" type="Sprite2D" parent="House" unique_id=1514568709]
 position = Vector2(871.7501, 242.5)
 scale = Vector2(8.726559, 0.29687515)
@@ -95,6 +105,16 @@ shape = SubResource("RectangleShape2D_flbuq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1105538706]
 position = Vector2(-71.99997, 546.2498)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_myf5j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=664446733]
+position = Vector2(-224.99997, 454.24982)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_myf5j")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1975652672]
+position = Vector2(-366.99997, 340.24982)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_myf5j")
 
