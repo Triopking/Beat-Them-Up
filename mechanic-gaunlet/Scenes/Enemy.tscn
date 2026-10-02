@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b3uvs3f3bdbsi"]
+
+[ext_resource type="Script" uid="uid://c80d8n6jw06l2" path="res://Scripts/Player.gd" id="1_wovta"]
+[ext_resource type="Texture2D" path="res://Scenes/Egg-Definition.webp" id="2_wovta"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ie3n"]
+radius = 26.0
+height = 124.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1843922582]
+script = ExtResource("1_wovta")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2044453431]
+modulate = Color(0.44806695, 0.44806695, 0.44806695, 1)
+position = Vector2(0, -0.5)
+scale = Vector2(0.40625003, 0.9765625)
+texture = ExtResource("2_wovta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
+shape = SubResource("CapsuleShape2D_8ie3n")
