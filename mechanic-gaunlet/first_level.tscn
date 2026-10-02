@@ -20,5 +20,9 @@ position = Vector2(537, 528)
 [node name="Shapes" type="Node" parent="." unique_id=69835187]
 
 [node name="Basic Shape" parent="Shapes" unique_id=115887287 instance=ExtResource("2_fnyhn")]
-position = Vector2(703, 814)
-scale = Vector2(196, 5.187501)
+position = Vector2(-19449.996, 814)
+scale = Vector2(4075.969, 5.187501)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=876714237]
+color = Color(0.5079715, 0.5079715, 0.5079715, 1)
+blend_mode = 1
