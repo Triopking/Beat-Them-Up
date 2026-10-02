@@ -35,31 +35,4 @@ scale = Vector2(14.890625, 1)
 [node name="Background_Shape" parent="." unique_id=1767553559 instance=ExtResource("4_kin1b")]
 position = Vector2(1012.99994, 355)
 scale = Vector2(61.599995, 99.66666)
-polygon = PackedVector2Array(0, 3, 2.4597511, 3, 5, 3, 5.194807, 1.4548497, 5, 0, 0, 0)
-
-[node name="Background_Shape2" parent="." unique_id=1426551853 instance=ExtResource("4_kin1b")]
-position = Vector2(1391.0001, 668)
-rotation = 0.16375005
-scale = Vector2(3.9720843, 4.25193)
-
-[node name="Background_Shape3" parent="." unique_id=830843036 instance=ExtResource("4_kin1b")]
-position = Vector2(1675.5, 342)
-scale = Vector2(50.899998, 109)
-polygon = PackedVector2Array(0, 3, 5, 3, 5, 1.5141957, 5, 1, 5, 0, 0, 0)
-
-[node name="Background_Shape4" parent="." unique_id=1922260888 instance=ExtResource("4_kin1b")]
-position = Vector2(1314.2927, 473.30786)
-rotation = -0.5519362
-scale = Vector2(2.2428246, 3.9893475)
-polygon = PackedVector2Array(0, 3, -44.835876, 36.49289, 21.25299, 61.727203, 13.791046, 30.294708, 40.18445, -3.84198, 85.128296, 15.838409, 102.37036, -0.85980225, 75.06479, -11.784607, 0.29977417, -35.31241, 5, 1, 5, 0, 0, 0)
-
-[node name="Background_Shape5" parent="." unique_id=1776539146 instance=ExtResource("4_kin1b")]
-position = Vector2(1421.1102, 376.06073)
-rotation = 1.3635521
-scale = Vector2(1.4130996, 2.719584)
-
-[node name="Background_Shape6" parent="." unique_id=325879709 instance=ExtResource("4_kin1b")]
-position = Vector2(1472.4663, 466.83124)
-rotation = 0.9536623
-scale = Vector2(17.135546, 1)
-polygon = PackedVector2Array(0, 3, 5, 3, 5, 1, 5, 0, 7.3357544, 167.01825, 16.357422, -62.937317, 3.1740265, -223.2373, 2.4984589, -244.9397, -4.202202, -84.85681, 0, 0)
+polygon = PackedVector2Array(0, 3, 2.4597511, 3, 5.3246765, 2.9899669, 7.4837666, 3.080268, 6.4935074, 2.2575254, 5.4058456, 2.0267563, 5.600651, 0.9832778, 6.5746765, 1.4749165, 8.9610405, 0.83277607, 6.4935074, 2.2575254, 6.6071434, 2.9699001, 14.870132, 2.9598665, 14.870132, 0, 8.685066, -0.15050173, 0, 0)
