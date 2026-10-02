@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjwgbuo2p7y2a"]
 
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="1_iti4p"]
+[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://basic_shape.tscn" id="2_dtjkg"]
 
 [sub_resource type="Gradient" id="Gradient_iti4p"]
 offsets = PackedFloat32Array(1)
@@ -56,14 +57,17 @@ shape = SubResource("WorldBoundaryShape2D_8ie3n")
 [node name="House" type="Node2D" parent="." unique_id=1303001255]
 position = Vector2(-272, 1)
 
+[node name="Basic Shape" parent="House" unique_id=115887287 instance=ExtResource("2_dtjkg")]
+position = Vector2(872.25, 241)
+scale = Vector2(8.742186, 0.24999991)
+
+[node name="Basic Shape2" parent="House" unique_id=1725017250 instance=ExtResource("2_dtjkg")]
+position = Vector2(1143.5, 356.25)
+scale = Vector2(0.26562545, 3.867187)
+
 [node name="Sprite2D" type="Sprite2D" parent="House" unique_id=1304386174]
 position = Vector2(842.5, 754.5)
 scale = Vector2(18.140625, 3.390625)
-texture = SubResource("GradientTexture2D_8ie3n")
-
-[node name="Sprite2D2" type="Sprite2D" parent="House" unique_id=904580653]
-position = Vector2(1143.5, 365)
-scale = Vector2(0.26562437, 4.125)
 texture = SubResource("GradientTexture2D_8ie3n")
 
 [node name="Sprite2D3" type="Sprite2D" parent="House" unique_id=235461835]
@@ -86,16 +90,6 @@ position = Vector2(-95.5, 339.5)
 scale = Vector2(2.546875, 3.1406248)
 texture = SubResource("GradientTexture2D_8ie3n")
 
-[node name="Sprite2D4" type="Sprite2D" parent="House" unique_id=1514568709]
-position = Vector2(871.7501, 242.5)
-scale = Vector2(8.726559, 0.29687515)
-texture = SubResource("GradientTexture2D_8ie3n")
-
-[node name="Sprite2D5" type="Sprite2D" parent="House" unique_id=880261565]
-position = Vector2(1400, 586)
-scale = Vector2(0.718748, 1.9687492)
-texture = SubResource("GradientTexture2D_8ie3n")
-
 [node name="Sprite2D9" type="Sprite2D" parent="House" unique_id=1373949576]
 position = Vector2(353, 314)
 scale = Vector2(4.65625, 0.5000001)
@@ -105,12 +99,6 @@ texture = SubResource("GradientTexture2D_7w7ni")
 position = Vector2(272, -1)
 scale = Vector2(0.99999994, 0.99999994)
 metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1755910102]
-position = Vector2(1127.9995, 585.9999)
-scale = Vector2(0.9999994, 0.9999994)
-shape = SubResource("RectangleShape2D_8ie3n")
-one_way_collision = true
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=441545969]
 position = Vector2(81.00001, 315.00006)
