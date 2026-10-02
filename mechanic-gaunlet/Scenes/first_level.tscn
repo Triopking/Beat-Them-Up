@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="1_fu4at"]
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_aqlmp"]
-[ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
-[ext_resource type="PackedScene" uid="uid://bct57s8qb4gy8" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
+[ext_resource type="PackedScene" uid="uid://dxh8id0537vft" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
+[ext_resource type="PackedScene" uid="uid://b8o7wkpeujrfh" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
 [ext_resource type="PackedScene" uid="uid://dy7omfv14myq6" path="res://Scenes/basic_polygon.tscn" id="5_kin1b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ccbq8"]
@@ -48,6 +48,11 @@ shape = SubResource("WorldBoundaryShape2D_ccbq8")
 
 [node name="World" type="Node2D" parent="." unique_id=1916299635]
 
+[node name="1D_Shape" parent="World" unique_id=825557474 instance=ExtResource("3_3qicx")]
+position = Vector2(994.8949, 500.9264)
+rotation = 1.5707964
+scale = Vector2(4.592224, 0.4967146)
+
 [node name="Basic Shape2" parent="World" unique_id=391385206 instance=ExtResource("1_fu4at")]
 position = Vector2(1454.5, 328)
 scale = Vector2(14.890625, 1)
@@ -84,21 +89,7 @@ polygon = PackedVector2Array(0, 0, 82.759094, -0.7162628, 82.848175, 70.19378, 5
 [node name="Basic_Polygon2" parent="." unique_id=180868676 instance=ExtResource("5_kin1b")]
 scale = Vector2(1.7777778, 1.5555556)
 
-[node name="Polygon2D" parent="." unique_id=840584801 instance=ExtResource("5_kin1b")]
-position = Vector2(1997.0001, 506)
+[node name="Basic_Polygon" parent="." unique_id=840584801 instance=ExtResource("5_kin1b")]
+position = Vector2(2023.9999, 468)
 scale = Vector2(2.4444444, 12)
-polygon = PackedVector2Array(59.727234, 1.9166679, 59.727234, 4.166668, -9.000061, 11.833332, -27.409119, 11.833332)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1119692251]
-position = Vector2(1997.0001, 506)
-scale = Vector2(2.4444444, 12)
-<<<<<<< HEAD
-polygon = PackedVector2Array(59.727234, 1.9166679, 59.727234, 4.166668, -9.000061, 11.833332, -27.409119, 11.833332)
-=======
 polygon = PackedVector2Array(0, 0, 9, 0, 49.90912, -0.6666641, 31.909119, 13.416668, 9, 9, 0, 9)
-
-[node name="1D_Shape" parent="." unique_id=825557474 instance=ExtResource("3_3qicx")]
-position = Vector2(991.5029, 504.90753)
-rotation = 1.5707964
-scale = Vector2(4.5279307, 0.4222831)
->>>>>>> a5496709374d112c54b21d6c9d439a8179a73e9d
