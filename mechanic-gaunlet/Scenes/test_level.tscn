@@ -132,4 +132,4 @@ color = Color(0.5079715, 0.5079715, 0.5079715, 1)
 blend_mode = 1
 
 [node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
-position = Vector2(1027, 556)
+position = Vector2(621, 136)
