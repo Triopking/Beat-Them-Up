@@ -75,6 +75,19 @@ position = Vector2(4.7683716e-07, -1.9073486e-06)
 scale = Vector2(1.375, 1.7500002)
 texture = SubResource("GradientTexture2D_8ie3n")
 
+[node name="Side2" type="Area2D" parent="." unique_id=1834068732]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side2" unique_id=1221857118]
+position = Vector2(-70, -2)
+shape = SubResource("RectangleShape2D_3pc1f")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Side2/CollisionShape2D" unique_id=955287993]
+visible = false
+position = Vector2(4.7683716e-07, -1.9073486e-06)
+scale = Vector2(1.375, 1.7500002)
+texture = SubResource("GradientTexture2D_8ie3n")
+
 [node name="AttackDuration" type="Timer" parent="." unique_id=1197141916]
 wait_time = 0.5
 
