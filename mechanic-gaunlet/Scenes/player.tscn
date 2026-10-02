@@ -90,7 +90,11 @@ texture = SubResource("GradientTexture2D_8ie3n")
 
 [node name="AttackDuration" type="Timer" parent="." unique_id=1197141916]
 wait_time = 0.5
+one_shot = true
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=730719387]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="timeout" from="AttackDuration" to="." method="_on_attack_duration_timeout"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]

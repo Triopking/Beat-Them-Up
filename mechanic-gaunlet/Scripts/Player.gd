@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -400.0
 #timers
 @onready var attack_duration: Timer = $AttackDuration
 @onready var attack_cooldown: Timer = $AttackCooldown
+var cool = true
 
 func _ready() -> void:
 	#side 1
@@ -41,14 +42,15 @@ func _physics_process(delta: float) -> void:
 		direction = 1
 	
 	# attack
-	if Input.is_action_just_pressed("AttackR"):
-		$Side1/CollisionShape2D.disabled = false
-		$Side1/CollisionShape2D/Sprite2D.visible = true
-		attack_duration.start()
-	elif Input.is_action_just_pressed("AttackL"):
-		$Side2/CollisionShape2D.disabled = false
-		$Side2/CollisionShape2D/Sprite2D.visible = true
-		attack_duration.start()
+	if cool == true:
+		if Input.is_action_just_pressed("AttackR"):
+			$Side1/CollisionShape2D.disabled = false
+			$Side1/CollisionShape2D/Sprite2D.visible = true
+			attack_duration.start()
+		elif Input.is_action_just_pressed("AttackL"):
+			$Side2/CollisionShape2D.disabled = false
+			$Side2/CollisionShape2D/Sprite2D.visible = true
+			attack_duration.start()
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -66,3 +68,12 @@ func _physics_process(delta: float) -> void:
 func _on_attack_duration_timeout() -> void:
 	$Side1/CollisionShape2D.disabled = true
 	$Side1/CollisionShape2D/Sprite2D.visible = false
+	$Side2/CollisionShape2D.disabled = true
+	$Side2/CollisionShape2D/Sprite2D.visible = false
+	cool = false
+	attack_cooldown.start()
+
+
+func _on_attack_cooldown_timeout() -> void:
+	cool = true
+	print("ljg")
