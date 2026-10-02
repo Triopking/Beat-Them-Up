@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="1_iti4p"]
 [ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://basic_shape.tscn" id="2_dtjkg"]
+[ext_resource type="PackedScene" uid="uid://b3uvs3f3bdbsi" path="res://Scenes/Enemy.tscn" id="3_eglq2"]
 
 [sub_resource type="Gradient" id="Gradient_iti4p"]
 offsets = PackedFloat32Array(1)
@@ -58,12 +59,10 @@ shape = SubResource("WorldBoundaryShape2D_8ie3n")
 position = Vector2(-272, 1)
 
 [node name="Basic Shape" parent="House" unique_id=115887287 instance=ExtResource("2_dtjkg")]
-position = Vector2(872.25, 241)
-scale = Vector2(8.742186, 0.24999991)
+position = Vector2(1230, 492)
 
-[node name="Basic Shape2" parent="House" unique_id=1725017250 instance=ExtResource("2_dtjkg")]
-position = Vector2(1143.5, 356.25)
-scale = Vector2(0.26562545, 3.867187)
+[node name="Basic Shape2" parent="House" unique_id=1015914750 instance=ExtResource("2_dtjkg")]
+position = Vector2(1012, 206)
 
 [node name="Sprite2D" type="Sprite2D" parent="House" unique_id=1304386174]
 position = Vector2(842.5, 754.5)
@@ -129,3 +128,6 @@ shape = SubResource("RectangleShape2D_myf5j")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1454617912]
 color = Color(0.5079715, 0.5079715, 0.5079715, 1)
 blend_mode = 1
+
+[node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
+position = Vector2(1024, 580)
