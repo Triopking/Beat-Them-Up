@@ -31,7 +31,7 @@ colors = PackedColorArray(1, 1, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8ie3n"]
 gradient = SubResource("Gradient_6t5aa")
 
-[node name="Player" type="CharacterBody2D" unique_id=1843922582]
+[node name="Player" type="CharacterBody2D" unique_id=1843922582 groups=["player"]]
 script = ExtResource("1_cvnsp")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=2044453431]
@@ -43,7 +43,7 @@ texture = ExtResource("2_6t5aa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
 shape = SubResource("CapsuleShape2D_8ie3n")
 
-[node name="Hitzone" type="Area2D" parent="." unique_id=1426823585]
+[node name="Hitzone" type="Area2D" parent="." unique_id=1426823585 groups=["player_hitbox"]]
 collision_layer = 2
 collision_mask = 2
 
@@ -62,8 +62,8 @@ position_smoothing_enabled = true
 texture = SubResource("GradientTexture2D_6t5aa")
 texture_scale = 8.6
 
-[node name="Side1" type="Area2D" parent="." unique_id=1691279803]
-collision_layer = 2
+[node name="Side1" type="Area2D" parent="." unique_id=1691279803 groups=["player_attack"]]
+collision_layer = 3
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Side1" unique_id=2142301736]
@@ -77,9 +77,8 @@ position = Vector2(4.7683716e-07, -1.9073486e-06)
 scale = Vector2(1.375, 1.7500002)
 texture = SubResource("GradientTexture2D_8ie3n")
 
-[node name="Side2" type="Area2D" parent="." unique_id=1834068732]
+[node name="Side2" type="Area2D" parent="." unique_id=1834068732 groups=["player_attack"]]
 collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Side2" unique_id=1221857118]
 position = Vector2(-70, -2)

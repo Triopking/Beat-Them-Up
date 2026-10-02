@@ -152,3 +152,6 @@ navigation_polygon = SubResource("NavigationPolygon_7w7ni")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1948928799]
 position = Vector2(599.25, 223)
 shape = SubResource("RectangleShape2D_enujx")
+
+[node name="Enemy2" parent="." unique_id=1006530297 instance=ExtResource("3_eglq2")]
+position = Vector2(85, 233)

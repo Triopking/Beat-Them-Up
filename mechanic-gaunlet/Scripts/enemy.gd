@@ -15,6 +15,7 @@ var health = 2
 const SPEED = 10000.0
 const JUMP_VELOCITY = -400.0
 
+var hit
 var direction
 
 func _ready() -> void:
@@ -35,6 +36,12 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
+	#when it is hit
+	if hit == true:
+		health =- 1
+		$AnimationPlayer.play("vulnerable")
+		invincibility.start()
+	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding():
 		direction = 1
@@ -52,11 +59,10 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	
 	if area.is_in_group("player_attack"):
-		health =- 1
-		$AnimationPlayer.play("vulnerable")
-		invincibility.start()
+		hit = true
 
 
 func _on_invincibility_timeout() -> void:
-	$AnimationPlayer.stop()
+	$AnimationPlayer.play("RESET")
+	hit = false
 	$Area2D/CollisionShape2D.disabled = false
