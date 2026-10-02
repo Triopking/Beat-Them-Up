@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dy7omfv14myq6"]
+
+[node name="Basic_Polygon" type="Polygon2D" unique_id=840584801]
+color = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(0, 0, 9, 0, 9, 9, 0, 9)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1203669558]
+
+[node name="CollisionShape" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=293895332]
+polygon = PackedVector2Array(0, 0, 9, 0, 9, 9, 0, 9)
