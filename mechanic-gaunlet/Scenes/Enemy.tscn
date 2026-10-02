@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3uvs3f3bdbsi"]
 
 [ext_resource type="Script" uid="uid://c80d8n6jw06l2" path="res://Scripts/Player.gd" id="1_wovta"]
-[ext_resource type="Texture2D" path="res://Scenes/Egg-Definition.webp" id="2_wovta"]
+[ext_resource type="Texture2D" uid="uid://vvtxujy16s5j" path="res://Scenes/Egg-Definition.webp" id="2_wovta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ie3n"]
 radius = 26.0
