@@ -2,15 +2,71 @@
 
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="1_iti4p"]
 
+[sub_resource type="Gradient" id="Gradient_iti4p"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(9.62615e-07, 0, 0.46583444, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_flbuq"]
+gradient = SubResource("Gradient_iti4p")
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8ie3n"]
+
+[sub_resource type="Gradient" id="Gradient_dtjkg"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(2.2140146e-06, 0, 0.7180695, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8ie3n"]
+gradient = SubResource("Gradient_dtjkg")
 
 [node name="TestLevel" type="Node2D" unique_id=1711353256]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2146768323]
+position = Vector2(600, 447.5)
+scale = Vector2(8.749999, 6.6718736)
+texture = SubResource("GradientTexture2D_flbuq")
+
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("1_iti4p")]
-position = Vector2(538, 525)
+position = Vector2(603, 578)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=676359925]
+position = Vector2(0, -132)
+zoom = Vector2(0.955, 0.955)
+position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=734880586]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2050622443]
 position = Vector2(536, 648)
 shape = SubResource("WorldBoundaryShape2D_8ie3n")
+
+[node name="House" type="Node2D" parent="." unique_id=1303001255]
+position = Vector2(-272, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="House" unique_id=1304386174]
+position = Vector2(842.5, 754.5)
+scale = Vector2(18.140625, 3.390625)
+texture = SubResource("GradientTexture2D_8ie3n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="House" unique_id=904580653]
+position = Vector2(1143.5, 365)
+scale = Vector2(0.26562437, 4.125)
+texture = SubResource("GradientTexture2D_8ie3n")
+
+[node name="Sprite2D3" type="Sprite2D" parent="House" unique_id=235461835]
+position = Vector2(601.0002, 362)
+scale = Vector2(0.26562437, 4.03125)
+texture = SubResource("GradientTexture2D_8ie3n")
+
+[node name="Sprite2D4" type="Sprite2D" parent="House" unique_id=1514568709]
+position = Vector2(871.7501, 242.5)
+scale = Vector2(8.726559, 0.29687515)
+texture = SubResource("GradientTexture2D_8ie3n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="House" unique_id=1630537987]
+position = Vector2(6.1035156e-05, 0)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="House/StaticBody2D" unique_id=949315076]
+position = Vector2(1143.5, 365.5)
+polygon = PackedVector2Array(-552.49994, -133.49997, 9.500061, -133.49997, 8.500061, 131.50003, -9.499939, 131.50003, -10.5, -111.5, -533.5, -112.5, -532.5, 125.5, -551.5, 125.5)
