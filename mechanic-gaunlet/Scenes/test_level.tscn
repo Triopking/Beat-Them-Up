@@ -38,7 +38,7 @@ size = Vector2(17.000008, 259)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myf5j"]
 size = Vector2(164, 199.50018)
 
-[node name="TestLevel" type="Node2D" unique_id=1711353256]
+[node name="Debug_Level" type="Node2D" unique_id=1711353256]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2146768323]
 position = Vector2(600, 447.5)

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bsokuidmdnau4"]
+
+[ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="1_5puvx"]
+[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://basic_shape.tscn" id="2_fnyhn"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fnyhn"]
+
+[node name="First Level" type="Node2D" unique_id=1418971418]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=902867103]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=186395439]
+position = Vector2(536, 648)
+shape = SubResource("WorldBoundaryShape2D_fnyhn")
+
+[node name="Player" parent="." unique_id=1843922582 instance=ExtResource("1_5puvx")]
+position = Vector2(537, 528)
+
+[node name="Shapes" type="Node" parent="." unique_id=69835187]
+
+[node name="Basic Shape" parent="Shapes" unique_id=115887287 instance=ExtResource("2_fnyhn")]
+position = Vector2(703, 814)
+scale = Vector2(196, 5.187501)
