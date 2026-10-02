@@ -59,10 +59,12 @@ shape = SubResource("WorldBoundaryShape2D_8ie3n")
 position = Vector2(-272, 1)
 
 [node name="Basic Shape" parent="House" unique_id=115887287 instance=ExtResource("2_dtjkg")]
-position = Vector2(1230, 492)
+position = Vector2(1143.5, 354)
+scale = Vector2(0.296875, 3.7812498)
 
 [node name="Basic Shape2" parent="House" unique_id=1015914750 instance=ExtResource("2_dtjkg")]
-position = Vector2(1012, 206)
+position = Vector2(872, 241)
+scale = Vector2(8.75, 0.28125006)
 
 [node name="Sprite2D" type="Sprite2D" parent="House" unique_id=1304386174]
 position = Vector2(842.5, 754.5)
@@ -130,4 +132,4 @@ color = Color(0.5079715, 0.5079715, 0.5079715, 1)
 blend_mode = 1
 
 [node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
-position = Vector2(1024, 580)
+position = Vector2(1027, 556)
