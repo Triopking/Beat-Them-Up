@@ -76,5 +76,8 @@ scale = Vector2(1.375, 1.7500002)
 texture = SubResource("GradientTexture2D_8ie3n")
 
 [node name="AttackDuration" type="Timer" parent="." unique_id=1197141916]
+wait_time = 0.5
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=730719387]
+
+[connection signal="timeout" from="AttackDuration" to="." method="_on_attack_duration_timeout"]

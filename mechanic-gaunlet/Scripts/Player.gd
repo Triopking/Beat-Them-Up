@@ -7,6 +7,9 @@ const SPEED = 20000
 const TOPSPEED = 35000
 const JUMP_VELOCITY = -400.0
 
+#timers
+@onready var attack_duration: Timer = $AttackDuration
+@onready var attack_cooldown: Timer = $AttackCooldown
 
 func _ready() -> void:
 	$Side1/CollisionShape2D.disabled = true
@@ -36,6 +39,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack1"):
 		$Side1/CollisionShape2D.disabled = false
 		$Side1/CollisionShape2D/Sprite2D.visible = true
+		attack_duration.start()
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -48,3 +52,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_attack_duration_timeout() -> void:
+	$Side1/CollisionShape2D.disabled = true
+	$Side1/CollisionShape2D/Sprite2D.visible = false
