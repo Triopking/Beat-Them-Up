@@ -11,6 +11,16 @@ height = 124.0
 radius = 35.0
 height = 128.0
 
+[sub_resource type="Gradient" id="Gradient_cvnsp"]
+offsets = PackedFloat32Array(0, 0.896)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6t5aa"]
+gradient = SubResource("Gradient_cvnsp")
+fill = 1
+fill_from = Vector2(0.49421966, 0.50289017)
+fill_to = Vector2(0.9017341, 0.15028901)
+
 [node name="Player" type="CharacterBody2D" unique_id=1843922582]
 script = ExtResource("1_cvnsp")
 
@@ -29,3 +39,12 @@ shape = SubResource("CapsuleShape2D_8ie3n")
 position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_flbuq")
 debug_color = Color(0.916129, 8.018583e-05, 0.71216357, 0.41960785)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1101342236]
+position = Vector2(0, -132)
+zoom = Vector2(0.955, 0.955)
+position_smoothing_enabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2051901423]
+texture = SubResource("GradientTexture2D_6t5aa")
+texture_scale = 8.6

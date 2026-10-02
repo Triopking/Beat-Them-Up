@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+#double jump
+var djump = 1
 
 const SPEED = 20000
 const TOPSPEED = 35000
@@ -10,9 +12,13 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta * 1.5
+		if Input.is_action_just_pressed("Jump") and djump == 1:
+			velocity.y = JUMP_VELOCITY * 1.5
+			djump = 0
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
+		djump = 1
 		velocity.y = JUMP_VELOCITY * 1.5
 	var direction
 	if Input.is_action_pressed("Left"):

@@ -18,6 +18,12 @@ colors = PackedColorArray(2.2140146e-06, 0, 0.7180695, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8ie3n"]
 gradient = SubResource("Gradient_dtjkg")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ie3n"]
+size = Vector2(525.5001, 20.000092)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flbuq"]
+size = Vector2(16.999939, 258.00012)
+
 [node name="TestLevel" type="Node2D" unique_id=1711353256]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2146768323]
@@ -27,11 +33,6 @@ texture = SubResource("GradientTexture2D_flbuq")
 
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("1_iti4p")]
 position = Vector2(603, 578)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=676359925]
-position = Vector2(0, -132)
-zoom = Vector2(0.955, 0.955)
-position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=734880586]
 metadata/_edit_lock_ = true
@@ -64,9 +65,21 @@ scale = Vector2(8.726559, 0.29687515)
 texture = SubResource("GradientTexture2D_8ie3n")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="House" unique_id=1630537987]
-position = Vector2(6.1035156e-05, 0)
+position = Vector2(272, -1)
 scale = Vector2(0.99999994, 0.99999994)
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="House/StaticBody2D" unique_id=949315076]
-position = Vector2(1143.5, 365.5)
-polygon = PackedVector2Array(-552.49994, -133.49997, 9.500061, -133.49997, 8.500061, 131.50003, -9.499939, 131.50003, -10.5, -111.5, -533.5, -112.5, -532.5, 125.5, -551.5, 125.5)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1755910102]
+position = Vector2(596.00006, 483)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_8ie3n")
+one_way_collision = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House/StaticBody2D" unique_id=1860626852]
+position = Vector2(328.4999, 362.99994)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_flbuq")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1454617912]
+color = Color(0.5079715, 0.5079715, 0.5079715, 1)
+blend_mode = 1
