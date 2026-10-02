@@ -63,6 +63,8 @@ texture = SubResource("GradientTexture2D_6t5aa")
 texture_scale = 8.6
 
 [node name="Side1" type="Area2D" parent="." unique_id=1691279803]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Side1" unique_id=2142301736]
 position = Vector2(69, -2)
@@ -76,6 +78,8 @@ scale = Vector2(1.375, 1.7500002)
 texture = SubResource("GradientTexture2D_8ie3n")
 
 [node name="Side2" type="Area2D" parent="." unique_id=1834068732]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Side2" unique_id=1221857118]
 position = Vector2(-70, -2)
@@ -93,7 +97,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=730719387]
-wait_time = 0.5
+wait_time = 0.3
 one_shot = true
 
 [connection signal="timeout" from="AttackDuration" to="." method="_on_attack_duration_timeout"]

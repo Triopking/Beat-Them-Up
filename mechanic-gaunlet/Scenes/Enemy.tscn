@@ -11,11 +11,48 @@ height = 124.0
 radius = 36.0
 height = 130.0
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1843922582]
+[sub_resource type="Animation" id="Animation_wovta"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xeo28"]
+resource_name = "vulnerable"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.96666664, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.17880967, 0.17880964, 0.17880964, 1), Color(1, 1, 1, 1), Color(0.17880967, 0.17880964, 0.17880964, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kpr8r"]
+_data = {
+&"RESET": SubResource("Animation_wovta"),
+&"vulnerable": SubResource("Animation_xeo28")
+}
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1843922582 groups=["enemy"]]
 script = ExtResource("1_wovta")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=2044453431]
-modulate = Color(0.44806695, 0.44806695, 0.44806695, 1)
 texture_filter = 1
 position = Vector2(0, -6.500001)
 scale = Vector2(0.40625003, 0.41666666)
@@ -24,7 +61,7 @@ texture = ExtResource("2_wovta")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
 shape = SubResource("CapsuleShape2D_8ie3n")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=203179390]
+[node name="Area2D" type="Area2D" parent="." unique_id=203179390 groups=["enemy", "player"]]
 collision_layer = 2
 collision_mask = 2
 
@@ -42,3 +79,13 @@ position = Vector2(26, 23)
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1520210631]
 debug_enabled = true
 debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="Invincibility" type="Timer" parent="." unique_id=1710537782]
+wait_time = 0.4
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1593015839]
+libraries/ = SubResource("AnimationLibrary_kpr8r")
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="timeout" from="Invincibility" to="." method="_on_invincibility_timeout"]
