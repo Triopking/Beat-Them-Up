@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="1_fu4at"]
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_aqlmp"]
+[ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
+[ext_resource type="PackedScene" uid="uid://bct57s8qb4gy8" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ccbq8"]
 
@@ -12,7 +14,7 @@ position = Vector2(3519.002, 743.00006)
 scale = Vector2(877.875, 2.96875)
 
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_aqlmp")]
-position = Vector2(537, 413)
+position = Vector2(540, 561)
 
 [node name="World_Border" type="StaticBody2D" parent="." unique_id=538787465]
 metadata/_edit_lock_ = true
@@ -20,3 +22,40 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World_Border" unique_id=527409986]
 position = Vector2(536, 648)
 shape = SubResource("WorldBoundaryShape2D_ccbq8")
+
+[node name="1D_Shape" parent="." unique_id=825557474 instance=ExtResource("3_3qicx")]
+position = Vector2(994.8949, 500.9264)
+rotation = 1.5707964
+scale = Vector2(4.592224, 0.4967146)
+
+[node name="Basic Shape2" parent="." unique_id=391385206 instance=ExtResource("1_fu4at")]
+position = Vector2(1454.5, 328)
+scale = Vector2(14.890625, 1)
+
+[node name="Background_Shape" parent="." unique_id=1767553559 instance=ExtResource("4_kin1b")]
+position = Vector2(1151, 501)
+scale = Vector2(4.7812514, 5.1406255)
+
+[node name="Background_Shape2" parent="." unique_id=1426551853 instance=ExtResource("4_kin1b")]
+position = Vector2(1391.0001, 668)
+rotation = 0.16375005
+scale = Vector2(3.9720843, 4.25193)
+
+[node name="Background_Shape3" parent="." unique_id=830843036 instance=ExtResource("4_kin1b")]
+position = Vector2(1675.5, 500.5)
+scale = Vector2(5.734375, 4.609375)
+
+[node name="Background_Shape4" parent="." unique_id=1922260888 instance=ExtResource("4_kin1b")]
+position = Vector2(1314.2927, 473.30786)
+rotation = -0.5519362
+scale = Vector2(2.2428246, 3.9893475)
+
+[node name="Background_Shape5" parent="." unique_id=1776539146 instance=ExtResource("4_kin1b")]
+position = Vector2(1421.1102, 376.06073)
+rotation = 1.3635521
+scale = Vector2(1.4130996, 2.719584)
+
+[node name="Background_Shape6" parent="." unique_id=325879709 instance=ExtResource("4_kin1b")]
+position = Vector2(1502.3896, 484.41388)
+rotation = 0.9536623
+scale = Vector2(1.3990402, 1)

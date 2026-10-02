@@ -8,4 +8,5 @@ colors = PackedColorArray(0, 1, 0, 1)
 gradient = SubResource("Gradient_r76ko")
 
 [node name="Background_Shape" type="Sprite2D" unique_id=1767553559]
+show_behind_parent = true
 texture = SubResource("GradientTexture2D_myf5j")
