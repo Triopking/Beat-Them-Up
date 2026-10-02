@@ -9,14 +9,11 @@ gradient = SubResource("Gradient_gewca")
 fill_from = Vector2(0.10869565, 0.33043477)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poijg"]
-size = Vector2(163.00006, 201.00005)
+size = Vector2(64, 64)
 
 [node name="Basic Shape" type="Sprite2D" unique_id=115887287]
-position = Vector2(214.99998, 170.50002)
-scale = Vector2(2.5312502, 3.140625)
 texture = SubResource("GradientTexture2D_p8gn2")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1603819545]
-position = Vector2(-7.6293945e-06, -7.6293945e-06)
-scale = Vector2(0.392638, 0.31840786)
+position = Vector2(0, -3.8146973e-06)
 shape = SubResource("RectangleShape2D_poijg")
