@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3uvs3f3bdbsi"]
 
-[ext_resource type="Script" uid="uid://cc4epj26xnj85" path="res://enemy.gd" id="1_wovta"]
-[ext_resource type="Texture2D" uid="uid://vvtxujy16s5j" path="res://Scenes/Egg-Definition.webp" id="2_wovta"]
+[ext_resource type="Script" uid="uid://cc4epj26xnj85" path="res://Scripts/enemy.gd" id="1_wovta"]
+[ext_resource type="Texture2D" uid="uid://vvtxujy16s5j" path="res://Assets/Egg-Definition.webp" id="2_wovta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ie3n"]
 radius = 26.0
@@ -38,15 +38,6 @@ position = Vector2(-26, 23)
 
 [node name="RightDown" type="RayCast2D" parent="." unique_id=167452373]
 position = Vector2(26, 23)
-
-[node name="RightUp" type="RayCast2D" parent="." unique_id=1445886308]
-target_position = Vector2(98, 0)
-collide_with_areas = true
-
-[node name="LeftUp" type="RayCast2D" parent="." unique_id=1436768154]
-rotation = 3.1415927
-target_position = Vector2(98, 0)
-hit_from_inside = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1520210631]
 debug_enabled = true

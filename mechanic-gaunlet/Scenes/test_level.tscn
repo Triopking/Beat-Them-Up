@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cjwgbuo2p7y2a"]
 
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="1_iti4p"]
-[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://basic_shape.tscn" id="2_dtjkg"]
+[ext_resource type="Script" uid="uid://cbrmwj70kr050" path="res://Scripts/test_level.gd" id="1_rsyfn"]
+[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="2_dtjkg"]
 [ext_resource type="PackedScene" uid="uid://b3uvs3f3bdbsi" path="res://Scenes/Enemy.tscn" id="3_eglq2"]
 
 [sub_resource type="Gradient" id="Gradient_iti4p"]
@@ -38,7 +39,16 @@ size = Vector2(17.000008, 259)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myf5j"]
 size = Vector2(164, 199.50018)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_7w7ni"]
+vertices = PackedVector2Array(875.53906, 214.95313, 876.4297, 231, 319.53125, 231, 320.5, 212.03906)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(311, 202, 885, 205, 887, 241, 309, 241)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_enujx"]
+size = Vector2(559.5, 22)
+
 [node name="Debug_Level" type="Node2D" unique_id=1711353256]
+script = ExtResource("1_rsyfn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2146768323]
 position = Vector2(600, 447.5)
@@ -132,4 +142,13 @@ color = Color(0.5079715, 0.5079715, 0.5079715, 1)
 blend_mode = 1
 
 [node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
-position = Vector2(1027, 556)
+position = Vector2(621, 136)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1968156029]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Area2D" unique_id=757593663]
+navigation_polygon = SubResource("NavigationPolygon_7w7ni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1948928799]
+position = Vector2(599.25, 223)
+shape = SubResource("RectangleShape2D_enujx")

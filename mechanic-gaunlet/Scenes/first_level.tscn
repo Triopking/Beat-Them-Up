@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://bsokuidmdnau4"]
 
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="1_5puvx"]
+<<<<<<< HEAD:mechanic-gaunlet/first_level.tscn
 [ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://basic_shape.tscn" id="2_fnyhn"]
 [ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://1d_shape.tscn" id="3_7m365"]
+=======
+[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="2_fnyhn"]
+>>>>>>> bd0d4b300a1cc87db45da384aefd3e89dc3010f9:mechanic-gaunlet/Scenes/first_level.tscn
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fnyhn"]
 
