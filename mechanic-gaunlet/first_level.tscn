@@ -2,20 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="1_5puvx"]
 [ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://basic_shape.tscn" id="2_fnyhn"]
+[ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://1d_shape.tscn" id="3_7m365"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fnyhn"]
 
 [node name="First Level" type="Node2D" unique_id=1418971418]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=902867103]
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=186395439]
-position = Vector2(536, 648)
-shape = SubResource("WorldBoundaryShape2D_fnyhn")
-
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("1_5puvx")]
 position = Vector2(537, 528)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=876714237]
+color = Color(0.5079715, 0.5079715, 0.5079715, 1)
+blend_mode = 1
+
+[node name="Worldborder" type="StaticBody2D" parent="." unique_id=902867103]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Worldborder" unique_id=186395439]
+position = Vector2(536, 648)
+shape = SubResource("WorldBoundaryShape2D_fnyhn")
 
 [node name="Shapes" type="Node" parent="." unique_id=69835187]
 
@@ -23,6 +28,6 @@ position = Vector2(537, 528)
 position = Vector2(-19449.996, 814)
 scale = Vector2(4075.969, 5.187501)
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=876714237]
-color = Color(0.5079715, 0.5079715, 0.5079715, 1)
-blend_mode = 1
+[node name="1D_Shape" parent="." unique_id=825557474 instance=ExtResource("3_7m365")]
+position = Vector2(780, 568)
+rotation = -4.712389
