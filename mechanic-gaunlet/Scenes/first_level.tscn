@@ -34,6 +34,10 @@ drag_and_drop_selection_enabled = false
 middle_mouse_paste_enabled = false
 empty_selection_clipboard_enabled = false
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1498720449]
+color = Color(0.5079715, 0.5079715, 0.5079715, 1)
+blend_mode = 1
+
 [node name="World_Border" type="StaticBody2D" parent="." unique_id=538787465]
 metadata/_edit_lock_ = true
 
@@ -77,4 +81,4 @@ position = Vector2(205, 575)
 scale = Vector2(0.53125, 1.015625)
 
 [node name="Background_Shape" parent="." unique_id=523277365 instance=ExtResource("4_kin1b")]
-position = Vector2(1321, 575)
+position = Vector2(1010, 359)
