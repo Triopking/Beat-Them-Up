@@ -12,8 +12,13 @@ const JUMP_VELOCITY = -400.0
 @onready var attack_cooldown: Timer = $AttackCooldown
 
 func _ready() -> void:
+	#side 1
 	$Side1/CollisionShape2D.disabled = true
 	$Side1/CollisionShape2D/Sprite2D.visible = false
+	
+	#side 2
+	$Side2/CollisionShape2D.disabled = true
+	$Side2/CollisionShape2D/Sprite2D.visible = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -36,9 +41,13 @@ func _physics_process(delta: float) -> void:
 		direction = 1
 	
 	# attack
-	if Input.is_action_just_pressed("attack1"):
+	if Input.is_action_just_pressed("AttackR"):
 		$Side1/CollisionShape2D.disabled = false
 		$Side1/CollisionShape2D/Sprite2D.visible = true
+		attack_duration.start()
+	elif Input.is_action_just_pressed("AttackL"):
+		$Side2/CollisionShape2D.disabled = false
+		$Side2/CollisionShape2D/Sprite2D.visible = true
 		attack_duration.start()
 	
 	# Get the input direction and handle the movement/deceleration.
