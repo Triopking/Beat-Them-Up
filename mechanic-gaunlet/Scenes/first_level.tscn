@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cybcfiowllbfy"]
+
+[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="1_fu4at"]
+[ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_aqlmp"]
+[ext_resource type="PackedScene" uid="uid://dxh8id0537vft" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
+[ext_resource type="PackedScene" uid="uid://b8o7wkpeujrfh" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
+[ext_resource type="PackedScene" uid="uid://dy7omfv14myq6" path="res://Scenes/basic_polygon.tscn" id="5_kin1b"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ccbq8"]
+
+[node name="First_Level" type="Node2D" unique_id=1223344096]
+
+[node name="Basic Shape" parent="." unique_id=115887287 instance=ExtResource("1_fu4at")]
+position = Vector2(3519.002, 743.00006)
+scale = Vector2(877.875, 2.96875)
+
+[node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_aqlmp")]
+position = Vector2(543, 561)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1490564817]
+offset_left = 486.0
+offset_top = 346.0
+offset_right = 575.0
+offset_bottom = 438.0
+text = "WASD
+Space
+Q E"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+middle_mouse_paste_enabled = false
+empty_selection_clipboard_enabled = false
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1498720449]
+color = Color(0.5079715, 0.5079715, 0.5079715, 1)
+blend_mode = 1
+
+[node name="World_Border" type="StaticBody2D" parent="." unique_id=538787465]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World_Border" unique_id=527409986]
+position = Vector2(536, 648)
+shape = SubResource("WorldBoundaryShape2D_ccbq8")
+
+[node name="World" type="Node2D" parent="." unique_id=1916299635]
+
+[node name="1D_Shape" parent="World" unique_id=825557474 instance=ExtResource("3_3qicx")]
+position = Vector2(994.8949, 500.9264)
+rotation = 1.5707964
+scale = Vector2(4.592224, 0.4967146)
+
+[node name="Basic Shape2" parent="World" unique_id=391385206 instance=ExtResource("1_fu4at")]
+position = Vector2(1454.5, 328)
+scale = Vector2(14.890625, 1)
+
+[node name="Basic Shape3" parent="World" unique_id=1757493203 instance=ExtResource("1_fu4at")]
+position = Vector2(213.794, 429.48132)
+rotation = 0.19474614
+scale = Vector2(0.49172497, 8.217368)
+
+[node name="Basic Shape4" parent="World" unique_id=1721354334 instance=ExtResource("1_fu4at")]
+position = Vector2(206.5859, 227.54176)
+rotation = -0.48664063
+scale = Vector2(0.13246775, 2.1656756)
+
+[node name="Basic Shape5" parent="World" unique_id=1595013776 instance=ExtResource("1_fu4at")]
+position = Vector2(213.87656, 647.31555)
+rotation = -0.21658778
+scale = Vector2(1.1525736, 1.8349477)
+
+[node name="Basic Shape6" parent="World" unique_id=801358637 instance=ExtResource("1_fu4at")]
+position = Vector2(215.00002, 533)
+rotation = -0.23018126
+scale = Vector2(0.3281249, 1.6562499)
+
+[node name="Basic Shape7" parent="World" unique_id=1815179301 instance=ExtResource("1_fu4at")]
+position = Vector2(205, 575)
+scale = Vector2(0.53125, 1.015625)
+
+[node name="Background_Shape" parent="." unique_id=523277365 instance=ExtResource("4_kin1b")]
+position = Vector2(1000, 359)
+scale = Vector2(11.225353, 4.188405)
+polygon = PackedVector2Array(0, 0, 82.759094, -0.7162628, 82.848175, 70.19378, 57.013794, 72.82009, 49.53073, 55.391014, 63.78418, 14.08651, 52.737762, 20.532875, 39.28607, 17.42907, 41.51317, 48.94465, 70, 69, 34.055115, 69.000015, 11.402756, 69.23876, 15.144287, 64.70243, 32.970123, 64.547104, 23.874527, 27.217995, 15.678795, 69.477516, 0, 69)
+
+[node name="Basic_Polygon2" parent="." unique_id=180868676 instance=ExtResource("5_kin1b")]
+scale = Vector2(1.7777778, 1.5555556)
+
+[node name="Polygon2D" parent="." unique_id=840584801 instance=ExtResource("5_kin1b")]
+position = Vector2(2023.9999, 468)
+scale = Vector2(2.4444444, 12)
+polygon = PackedVector2Array(0, 0, 9, 0, 49.90912, -0.6666641, 31.909119, 13.416668, 9, 9, 0, 9)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1119692251]
+position = Vector2(2023.9999, 468)
+scale = Vector2(2.4444444, 12)
+polygon = PackedVector2Array(0, 0, 9, 0, 49.90912, -0.6666641, 31.909119, 13.416668, 9, 9, 0, 9)
