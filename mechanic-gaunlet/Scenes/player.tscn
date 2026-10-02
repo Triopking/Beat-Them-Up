@@ -34,6 +34,8 @@ texture = ExtResource("2_6t5aa")
 shape = SubResource("CapsuleShape2D_8ie3n")
 
 [node name="Hitzone" type="Area2D" parent="." unique_id=1426823585]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitzone" unique_id=1241000008]
 position = Vector2(0, -3)

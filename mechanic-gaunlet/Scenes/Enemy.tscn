@@ -7,14 +7,28 @@
 radius = 26.0
 height = 124.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flbuq"]
+radius = 36.0
+height = 130.0
+
 [node name="Enemy" type="CharacterBody2D" unique_id=1843922582]
 script = ExtResource("1_wovta")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=2044453431]
 modulate = Color(0.44806695, 0.44806695, 0.44806695, 1)
-position = Vector2(0, -0.5)
-scale = Vector2(0.40625003, 0.9765625)
+texture_filter = 1
+position = Vector2(0, -6.500001)
+scale = Vector2(0.40625003, 0.41666666)
 texture = ExtResource("2_wovta")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
 shape = SubResource("CapsuleShape2D_8ie3n")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=203179390]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1009945780]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_flbuq")
+debug_color = Color(0.8265024, 0.001577341, 0.95403486, 0.41960785)
