@@ -1,14 +1,11 @@
-[gd_scene format=3 uid="uid://bct57s8qb4gy8"]
+[gd_scene format=3 uid="uid://y38eqbh34miv"]
 
 [sub_resource type="Gradient" id="Gradient_r76ko"]
 offsets = PackedFloat32Array(1)
 colors = PackedColorArray(0, 1, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_myf5j"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nx5us"]
 gradient = SubResource("Gradient_r76ko")
 
-[node name="Background_Shape" type="Polygon2D" unique_id=295432475]
-show_behind_parent = true
-scale = Vector2(0.6, 1)
-texture = SubResource("GradientTexture2D_myf5j")
-polygon = PackedVector2Array(0, 3, 5, 3, 5, 1, 5, 0, 0, 0)
+[node name="Background_Shape" type="Sprite2D" unique_id=523277365]
+texture = SubResource("GradientTexture2D_nx5us")
