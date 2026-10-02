@@ -7,6 +7,8 @@ colors = PackedColorArray(0, 1, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_myf5j"]
 gradient = SubResource("Gradient_r76ko")
 
-[node name="Background_Shape" type="Sprite2D" unique_id=1767553559]
+[node name="Background_Shape" type="Polygon2D" unique_id=295432475]
 show_behind_parent = true
+scale = Vector2(0.6, 1)
 texture = SubResource("GradientTexture2D_myf5j")
+polygon = PackedVector2Array(0, 3, 5, 3, 5, 1, 5, 0, 0, 0)
