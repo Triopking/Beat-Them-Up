@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var left_down: RayCast2D = $LeftDown
 @onready var right_down: RayCast2D = $RightDown
 
+#health
+var health = 2
 
 #speed and gravity
 const SPEED = 10000.0

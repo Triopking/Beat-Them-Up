@@ -8,6 +8,10 @@ const TOPSPEED = 35000
 const JUMP_VELOCITY = -400.0
 
 
+func _ready() -> void:
+	$Side1/CollisionShape2D.disabled = true
+	$Side1/CollisionShape2D/Sprite2D.visible = false
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -16,15 +20,22 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY * 1.5
 			djump = 0
 
-	# Handle jump.
+	# Jumping
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		djump = 1
 		velocity.y = JUMP_VELOCITY * 1.5
+	
+	#changing direction
 	var direction
 	if Input.is_action_pressed("Left"):
 		direction = -1
 	elif Input.is_action_pressed("Right"):
 		direction = 1
+	
+	# attack
+	if Input.is_action_just_pressed("attack1"):
+		$Side1/CollisionShape2D.disabled = false
+		$Side1/CollisionShape2D/Sprite2D.visible = true
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
