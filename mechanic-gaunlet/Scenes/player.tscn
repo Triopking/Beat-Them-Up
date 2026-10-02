@@ -45,6 +45,7 @@ debug_color = Color(0.916129, 8.018583e-05, 0.71216357, 0.41960785)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1101342236]
 position = Vector2(0, -132)
 zoom = Vector2(0.955, 0.955)
+process_callback = 0
 position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2051901423]
