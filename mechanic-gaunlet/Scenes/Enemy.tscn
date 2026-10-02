@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3uvs3f3bdbsi"]
 
-[ext_resource type="Script" uid="uid://cc4epj26xnj85" path="res://enemy.gd" id="1_wovta"]
-[ext_resource type="Texture2D" uid="uid://vvtxujy16s5j" path="res://Scenes/Egg-Definition.webp" id="2_wovta"]
+[ext_resource type="Script" uid="uid://cc4epj26xnj85" path="res://Scripts/enemy.gd" id="1_wovta"]
+[ext_resource type="Texture2D" uid="uid://vvtxujy16s5j" path="res://Assets/Egg-Definition.webp" id="2_wovta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ie3n"]
 radius = 26.0

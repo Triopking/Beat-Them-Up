@@ -15,13 +15,9 @@ func _ready() -> void:
 	var rdirection = randi()%2
 	if rdirection == 0:
 		direction = -1
-		left_down.enabled = true
-		right_down.enabled = false
 
 	elif rdirection == 1:
 		direction = 1
-		left_down.enabled = false
-		right_down.enabled = true
 
 func _physics_process(delta: float) -> void:
 	# gravity
@@ -29,17 +25,12 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	#when the raycasts on the left detect something, it would switch directions
-	#if not left_down.is_colliding():
-	#	direction = 1
-	#	left_down.enabled = false
-		#right_down.enabled = true
+	if not left_down.is_colliding():
+		direction = 1
 	
-	#elif not right_down.is_colliding():
-		#direction = -1
-		#left_down.enabled = true
-		#right_down.enabled = false
+	elif not right_down.is_colliding():
+		direction = -1
 	
-	#else:
-		velocity.x = direction * SPEED * delta
+	velocity.x = direction * SPEED * delta
 	
 	move_and_slide()
