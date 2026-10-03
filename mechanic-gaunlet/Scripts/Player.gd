@@ -38,8 +38,14 @@ func _physics_process(delta: float) -> void:
 	var direction
 	if Input.is_action_pressed("Left"):
 		direction = -1
+		$Icon.flip_h = true
+		$Icon.play("Walk")
 	elif Input.is_action_pressed("Right"):
 		direction = 1
+		$Icon.flip_h = false
+		$Icon.play("Walk")
+	else:
+		$Icon.play("idle")
 	
 	# attack
 	if cool == true:

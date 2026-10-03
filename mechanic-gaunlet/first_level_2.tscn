@@ -1,23 +1,23 @@
-[gd_scene format=3 uid="uid://vmwoh2tfojbx"]
+[gd_scene format=3 uid="uid://dgxgfe6fx7tpt"]
 
-[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="1_fu4at"]
-[ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_aqlmp"]
-[ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
-[ext_resource type="PackedScene" uid="uid://bct57s8qb4gy8" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
-[ext_resource type="PackedScene" uid="uid://dy7omfv14myq6" path="res://Scenes/basic_polygon.tscn" id="5_kin1b"]
-[ext_resource type="PackedScene" uid="uid://b3uvs3f3bdbsi" path="res://Scenes/Enemy.tscn" id="6_8tugf"]
-[ext_resource type="PackedScene" uid="uid://ciw0vyg0d7ug3" path="res://Scenes/basic_collision.tscn" id="7_m3o2c"]
+[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="1_sxkk1"]
+[ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_jafar"]
+[ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://Scenes/1d_shape.tscn" id="3_prvm8"]
+[ext_resource type="PackedScene" uid="uid://bct57s8qb4gy8" path="res://Scenes/background_shape.tscn" id="4_6e5p7"]
+[ext_resource type="PackedScene" uid="uid://dy7omfv14myq6" path="res://Scenes/basic_polygon.tscn" id="5_p8jir"]
+[ext_resource type="PackedScene" uid="uid://b3uvs3f3bdbsi" path="res://Scenes/Enemy.tscn" id="6_pm1jk"]
+[ext_resource type="PackedScene" uid="uid://ciw0vyg0d7ug3" path="res://Scenes/basic_collision.tscn" id="7_gsdjy"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ccbq8"]
 
-[node name="First_Level" type="Node2D" unique_id=1223344096]
+[node name="First_Level2" type="Node2D" unique_id=1223344096]
 
-[node name="Basic Shape" parent="." unique_id=115887287 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape" parent="." unique_id=115887287 instance=ExtResource("1_sxkk1")]
 position = Vector2(3519.002, 743.00006)
 scale = Vector2(877.875, 2.96875)
 
-[node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_aqlmp")]
-position = Vector2(7525, -1403)
+[node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_jafar")]
+position = Vector2(522, 509)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1490564817]
 offset_left = 486.0
@@ -50,179 +50,180 @@ shape = SubResource("WorldBoundaryShape2D_ccbq8")
 
 [node name="World" type="Node2D" parent="." unique_id=1916299635]
 
-[node name="1D_Shape" parent="World" unique_id=825557474 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape" parent="World" unique_id=825557474 instance=ExtResource("3_prvm8")]
 position = Vector2(994.8949, 500.9264)
 rotation = 1.5707964
 scale = Vector2(4.592224, 0.4967146)
 
-[node name="1D_Shape2" parent="World" unique_id=1052887249 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape2" parent="World" unique_id=1052887249 instance=ExtResource("3_prvm8")]
 position = Vector2(994.8949, 500.9264)
 rotation = 1.5707964
 scale = Vector2(4.592224, 0.4967146)
 
-[node name="1D_Shape4" parent="World" unique_id=818316485 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape4" parent="World" unique_id=818316485 instance=ExtResource("3_prvm8")]
 position = Vector2(5483.0005, 287.35004)
 rotation = 1.5707964
 scale = Vector2(7.2488494, 0.4967146)
 
-[node name="1D_Shape3" parent="World" unique_id=468459441 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape3" parent="World" unique_id=468459441 instance=ExtResource("3_prvm8")]
 position = Vector2(2202, 353.99997)
 rotation = 1.5707964
 scale = Vector2(5.0482135, 0.4967146)
 
-[node name="Basic Shape2" parent="World" unique_id=391385206 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape2" parent="World" unique_id=391385206 instance=ExtResource("1_sxkk1")]
 position = Vector2(1454.5, 92.00003)
 scale = Vector2(14.890625, 8.374999)
 
-[node name="Basic Shape3" parent="World" unique_id=1757493203 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape3" parent="World" unique_id=1757493203 instance=ExtResource("1_sxkk1")]
 position = Vector2(213.794, 429.48132)
 rotation = 0.19474614
 scale = Vector2(0.49172497, 8.217368)
 
-[node name="Basic Shape4" parent="World" unique_id=1721354334 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape4" parent="World" unique_id=1721354334 instance=ExtResource("1_sxkk1")]
 position = Vector2(206.5859, 227.54176)
 rotation = -0.48664063
 scale = Vector2(0.13246775, 2.1656756)
 
-[node name="Basic Shape5" parent="World" unique_id=1595013776 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape5" parent="World" unique_id=1595013776 instance=ExtResource("1_sxkk1")]
 position = Vector2(213.87656, 647.31555)
 rotation = -0.21658778
 scale = Vector2(1.1525736, 1.8349477)
 
-[node name="Basic Shape6" parent="World" unique_id=801358637 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape6" parent="World" unique_id=801358637 instance=ExtResource("1_sxkk1")]
 position = Vector2(215.00002, 533)
 rotation = -0.23018126
 scale = Vector2(0.3281249, 1.6562499)
 
-[node name="Basic Shape7" parent="World" unique_id=1815179301 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape7" parent="World" unique_id=1815179301 instance=ExtResource("1_sxkk1")]
 position = Vector2(205, 575)
 scale = Vector2(0.53125, 1.015625)
 
-[node name="Background_Shape" parent="." unique_id=523277365 instance=ExtResource("4_kin1b")]
+[node name="Background_Shape" parent="." unique_id=523277365 instance=ExtResource("4_6e5p7")]
 visible = false
 position = Vector2(1000, 359)
 scale = Vector2(11.225353, 4.188405)
 polygon = PackedVector2Array(0, 0, 82.759094, -0.7162628, 82.848175, 70.19378, 57.013794, 72.82009, 49.53073, 55.391014, 63.78418, 14.08651, 52.737762, 20.532875, 39.28607, 17.42907, 41.51317, 48.94465, 70, 69, 34.055115, 69.000015, 11.402756, 69.23876, 15.144287, 64.70243, 32.970123, 64.547104, 23.874527, 27.217995, 15.678795, 69.477516, 0, 69)
 
-[node name="Basic_Polygon2" parent="." unique_id=180868676 instance=ExtResource("5_kin1b")]
+[node name="Basic_Polygon2" parent="." unique_id=180868676 instance=ExtResource("5_p8jir")]
 scale = Vector2(1.7777778, 1.5555556)
 
-[node name="Basic Shape2" parent="." unique_id=157836908 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape2" parent="." unique_id=157836908 instance=ExtResource("1_sxkk1")]
 position = Vector2(2070.1384, 615.24854)
 rotation = 1.0471976
 scale = Vector2(0.9883248, 4.753677)
 
-[node name="Basic Shape6" parent="." unique_id=1360587850 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape6" parent="." unique_id=1360587850 instance=ExtResource("1_sxkk1")]
 position = Vector2(2057.9902, 35.994392)
 rotation = 1.0471976
 scale = Vector2(6.7839766, 8.499748)
 
-[node name="Basic Shape3" parent="." unique_id=656666332 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape3" parent="." unique_id=656666332 instance=ExtResource("1_sxkk1")]
 position = Vector2(4648.375, 593.87506)
 scale = Vector2(76.95703, 2.5664058)
 
-[node name="Basic Shape4" parent="." unique_id=241323985 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape4" parent="." unique_id=241323985 instance=ExtResource("1_sxkk1")]
 position = Vector2(2172, 622)
 scale = Vector2(1, 1.4375)
 
-[node name="Basic Shape5" parent="." unique_id=316991584 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape5" parent="." unique_id=316991584 instance=ExtResource("1_sxkk1")]
 position = Vector2(2118, 624)
 scale = Vector2(1.53125, 1)
 
-[node name="Basic Shape7" parent="." unique_id=354770545 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape7" parent="." unique_id=354770545 instance=ExtResource("1_sxkk1")]
 position = Vector2(3406.5, -211.99998)
 scale = Vector2(65.390625, 9.375001)
 
-[node name="Background_shape2" parent="." unique_id=1222826091 instance=ExtResource("4_kin1b")]
+[node name="Background_shape2" parent="." unique_id=1222826091 instance=ExtResource("4_6e5p7")]
 position = Vector2(1992.9999, 256)
 scale = Vector2(9.859156, 1.7391304)
 polygon = PackedVector2Array(0, 0, 20.387161, -29.900002, 74.9884, -29.497742, 101.1243, -31.050003, 75.54345, -10.141113, 72.21716, 28.75, 61.66858, -3.449997, 44.831436, 45.425003, 63.494293, 73.02501, 79.82428, 139.15002, 78.100006, 100.625015, 92.40143, 74.75, 88.3443, 41.40001, 90.18166, -29.385834, 144.33286, -35.075005, 128.8143, 19.550003, 144.23145, 74.75, 140.98572, 110.975006, 157.62, 81.65001, 156.91, 3.449997, 133.48001, -36.225006, 159.27185, -28.876816, 176.48572, -28.75, 175.87714, 232.30002, -8.317139, 232.30002, -7.607132, 63.25)
 
-[node name="Background_shape" parent="." unique_id=558860355 instance=ExtResource("4_kin1b")]
+[node name="Background_shape" parent="." unique_id=558860355 instance=ExtResource("4_6e5p7")]
 position = Vector2(3707, 184)
 scale = Vector2(24.859152, 6.238727)
 polygon = PackedVector2Array(0, 0, 22.04419, 0, 15.487259, 23.219048, 7.763733, 38.77143, 18.02153, 48.409523, 27.43457, 36.580956, 29.807938, 39.428574, 37.611908, 33.733337, 38.73825, 37.89524, 42.680466, 29.352379, 49.59944, 37.676193, 58.932022, 40.961906, 47.467422, 22.342857, 41.594345, 14.238094, 32.00603, 11.767178, 30.089523, 18.838097, 27.635696, 11.609524, 22.04419, 9.200001, 20.727451, 6.2636795, 17.820404, -0.21904755, 71.2816, 0.21904755, 71.08046, 67.24762, 0, 69)
 
-[node name="Background_shape3" parent="." unique_id=112559609 instance=ExtResource("4_kin1b")]
+[node name="Background_shape3" parent="." unique_id=112559609 instance=ExtResource("4_6e5p7")]
 position = Vector2(2187.0002, -18.999998)
 scale = Vector2(44.323944, 3.4782608)
 polygon = PackedVector2Array(0, 0, 71, 0, 74.49696, 23.8625, 74.248795, 60.374996, 70.97743, 68.7125, 0, 69)
 
-[node name="Enemy" parent="." unique_id=1239100787 instance=ExtResource("6_8tugf")]
+[node name="Enemy" parent="." unique_id=1239100787 instance=ExtResource("6_pm1jk")]
 position = Vector2(3415, 355)
 
-[node name="Enemy2" parent="." unique_id=1471557545 instance=ExtResource("6_8tugf")]
+[node name="Enemy2" parent="." unique_id=1471557545 instance=ExtResource("6_pm1jk")]
 position = Vector2(1223, 548)
 
-[node name="1D_Shape" parent="." unique_id=1714603602 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape" parent="." unique_id=1714603602 instance=ExtResource("3_prvm8")]
 position = Vector2(6175.7417, 477.05392)
 rotation = -0.5235988
 scale = Vector2(3.968703, 1.0196266)
 
-[node name="1D_Shape3" parent="." unique_id=1075133307 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape3" parent="." unique_id=1075133307 instance=ExtResource("3_prvm8")]
 position = Vector2(6054.4917, -186.05069)
 rotation = -0.5235988
 scale = Vector2(12.818856, 1.0093079)
 
-[node name="1D_Shape2" parent="." unique_id=973582437 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape2" parent="." unique_id=973582437 instance=ExtResource("3_prvm8")]
 position = Vector2(6023.894, 217.07759)
 rotation = 0.5235988
 scale = Vector2(12.610613, 1.038784)
 
-[node name="1D_Shape4" parent="." unique_id=1242839848 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape4" parent="." unique_id=1242839848 instance=ExtResource("3_prvm8")]
 position = Vector2(5994.038, -612.3225)
 rotation = 0.5235988
 scale = Vector2(13.926812, 1.0149939)
 
-[node name="Basic Shape8" parent="." unique_id=1132007953 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape8" parent="." unique_id=1132007953 instance=ExtResource("1_sxkk1")]
 position = Vector2(6412.892, 418.09708)
 scale = Vector2(4.5033617, 1)
 
-[node name="Basic Shape9" parent="." unique_id=1951281990 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape9" parent="." unique_id=1951281990 instance=ExtResource("1_sxkk1")]
 position = Vector2(5593, 19)
 scale = Vector2(3.0781267, 1)
 
-[node name="Basic Shape10" parent="." unique_id=1122030222 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape10" parent="." unique_id=1122030222 instance=ExtResource("1_sxkk1")]
 position = Vector2(6491.9995, -387)
 scale = Vector2(3.0781267, 1)
 
-[node name="Basic Shape13" parent="." unique_id=766882887 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape13" parent="." unique_id=766882887 instance=ExtResource("1_sxkk1")]
 position = Vector2(5525.9995, -831)
 scale = Vector2(3.0781267, 1)
 
-[node name="StaticBody2D" parent="." unique_id=1452010384 instance=ExtResource("7_m3o2c")]
+[node name="StaticBody2D" parent="." unique_id=1452010384 instance=ExtResource("7_gsdjy")]
 position = Vector2(994, 501)
 scale = Vector2(1.5715016, 14.883729)
 
-[node name="StaticBody2D2" parent="." unique_id=1125089378 instance=ExtResource("7_m3o2c")]
+[node name="StaticBody2D2" parent="." unique_id=1125089378 instance=ExtResource("7_gsdjy")]
 position = Vector2(2202, 333)
 scale = Vector2(1.487395, 22.29854)
+collision_layer = 3
 
-[node name="StaticBody2D3" parent="." unique_id=14124535 instance=ExtResource("7_m3o2c")]
+[node name="StaticBody2D3" parent="." unique_id=14124535 instance=ExtResource("7_gsdjy")]
 position = Vector2(5484.0005, 299)
 scale = Vector2(1.487395, 22.29854)
 
-[node name="Basic Shape11" parent="." unique_id=218993927 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape11" parent="." unique_id=218993927 instance=ExtResource("1_sxkk1")]
 position = Vector2(8473, -235.99997)
 scale = Vector2(60.843754, 31.781252)
 
-[node name="Basic Shape12" parent="." unique_id=1773090543 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape12" parent="." unique_id=1773090543 instance=ExtResource("1_sxkk1")]
 position = Vector2(4637.5, -1532)
 scale = Vector2(26.828125, 34.750004)
 
-[node name="1D_Shape5" parent="." unique_id=1361944809 instance=ExtResource("3_3qicx")]
+[node name="1D_Shape5" parent="." unique_id=1361944809 instance=ExtResource("3_prvm8")]
 position = Vector2(5971.0586, -1022.1389)
 rotation = -0.5235988
 scale = Vector2(12.806992, 0.9850862)
 
-[node name="Basic Shape14" parent="." unique_id=2117288368 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape14" parent="." unique_id=2117288368 instance=ExtResource("1_sxkk1")]
 position = Vector2(6712.5, -1222)
 scale = Vector2(12.578125, 1)
 
-[node name="Basic Shape15" parent="." unique_id=1170942816 instance=ExtResource("1_fu4at")]
+[node name="Basic Shape15" parent="." unique_id=1170942816 instance=ExtResource("1_sxkk1")]
 position = Vector2(8990, -2067.5)
 scale = Vector2(120.78125, 12.453125)
 
-[node name="StaticBody2D4" parent="." unique_id=701688565 instance=ExtResource("7_m3o2c")]
+[node name="StaticBody2D4" parent="." unique_id=701688565 instance=ExtResource("7_gsdjy")]
 position = Vector2(8163, -1423)
 scale = Vector2(1, 32.294464)
