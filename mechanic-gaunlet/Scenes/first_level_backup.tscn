@@ -111,8 +111,8 @@ rotation = 1.0471976
 scale = Vector2(6.7839766, 8.499748)
 
 [node name="Basic Shape3" parent="." unique_id=656666332 instance=ExtResource("1_eoci2")]
-position = Vector2(3840.375, 593.87506)
-scale = Vector2(51.707027, 2.5664058)
+position = Vector2(4648.375, 593.87506)
+scale = Vector2(76.95703, 2.5664058)
 
 [node name="Basic Shape4" parent="." unique_id=241323985 instance=ExtResource("1_eoci2")]
 position = Vector2(2172, 622)
@@ -146,3 +146,17 @@ position = Vector2(3415, 355)
 
 [node name="Enemy2" parent="." unique_id=1471557545 instance=ExtResource("6_77bhv")]
 position = Vector2(1223, 548)
+
+[node name="1D_Shape" parent="." unique_id=1714603602 instance=ExtResource("3_e0c0b")]
+position = Vector2(5717.072, 475.61572)
+rotation = -0.5235988
+scale = Vector2(3.9615173, 1)
+
+[node name="1D_Shape2" parent="." unique_id=973582437 instance=ExtResource("3_e0c0b")]
+position = Vector2(5761.965, 321.53775)
+rotation = 0.5235988
+scale = Vector2(5.6201262, 1)
+
+[node name="Basic Shape8" parent="." unique_id=1132007953 instance=ExtResource("1_eoci2")]
+position = Vector2(5908.5, 416)
+scale = Vector2(3.0781267, 1)
