@@ -1,5 +1,11 @@
-extends Control
+extends Node
 
+#player's highscore by destroying stuff
+var score
+
+#player's charged up gaunlet power
+var gauntlet_power
+const GAUNTLET_MAX = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,11 +15,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-
-
-func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/first_level.tscn")
-
-
-func _on_quit_pressed() -> void:
-	get_tree().quit()

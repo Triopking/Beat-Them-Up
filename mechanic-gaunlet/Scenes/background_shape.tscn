@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b8o7wkpeujrfh"]
+
+[node name="Background_shape" type="Polygon2D" unique_id=1222826091]
+show_behind_parent = true
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(0, 0, 71, 0, 70, 69, 0, 69)
