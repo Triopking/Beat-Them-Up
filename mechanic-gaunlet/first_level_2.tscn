@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dgxgfe6fx7tpt"]
 
+[ext_resource type="Texture2D" uid="uid://cotfk4wbyxbff" path="res://art/background 1.png" id="1_prvm8"]
 [ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="1_sxkk1"]
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_jafar"]
 [ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://Scenes/1d_shape.tscn" id="3_prvm8"]
@@ -13,13 +14,18 @@
 
 [node name="First_Level" type="Node2D" unique_id=1223344096]
 
+[node name="Background1" type="Sprite2D" parent="." unique_id=208998668]
+position = Vector2(562.00006, 185.00002)
+scale = Vector2(2.7069445, 2.7069445)
+texture = ExtResource("1_prvm8")
+
 [node name="Basic Shape" parent="." unique_id=115887287 instance=ExtResource("1_sxkk1")]
 position = Vector2(3519.002, 743.00006)
 scale = Vector2(877.875, 2.96875)
 
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_jafar")]
 top_level = true
-position = Vector2(788, 480)
+position = Vector2(788, 578)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1490564817]
 offset_left = 486.0

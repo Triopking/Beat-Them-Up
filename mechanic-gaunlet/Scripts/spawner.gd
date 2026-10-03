@@ -1,5 +1,6 @@
 extends Node2D
 
+#tutorial https://www.youtube.com/watch?v=LqkHEHB-HX4
 @onready var enemy = preload("res://Scenes/Enemy.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,4 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	pass # Replace with function body.
+	var ene = enemy.instantiate()
+	

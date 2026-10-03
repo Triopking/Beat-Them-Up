@@ -40,7 +40,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Walk",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -87,7 +87,8 @@ modulate = Color(0.44806695, 0.44806695, 0.44806695, 1)
 position = Vector2(0, -14)
 scale = Vector2(3.53125, 2.46875)
 sprite_frames = SubResource("SpriteFrames_vgqql")
-animation = &"idle"
+animation = &"Walk"
+frame_progress = 0.7597805
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
 shape = SubResource("CapsuleShape2D_8ie3n")

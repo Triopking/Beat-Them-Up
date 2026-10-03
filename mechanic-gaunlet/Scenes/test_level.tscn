@@ -141,9 +141,6 @@ shape = SubResource("RectangleShape2D_myf5j")
 color = Color(0.5079715, 0.5079715, 0.5079715, 1)
 blend_mode = 1
 
-[node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
-position = Vector2(621, 136)
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1968156029]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Area2D" unique_id=757593663]
@@ -153,5 +150,38 @@ navigation_polygon = SubResource("NavigationPolygon_7w7ni")
 position = Vector2(599.25, 223)
 shape = SubResource("RectangleShape2D_enujx")
 
+[node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
+position = Vector2(621, 136)
+
 [node name="Enemy2" parent="." unique_id=1006530297 instance=ExtResource("3_eglq2")]
-position = Vector2(85, 233)
+position = Vector2(-272, -577)
+
+[node name="Enemy3" parent="." unique_id=104770943 instance=ExtResource("3_eglq2")]
+position = Vector2(1024, -919)
+
+[node name="Enemy4" parent="." unique_id=424170554 instance=ExtResource("3_eglq2")]
+position = Vector2(158, -1504)
+
+[node name="Enemy5" parent="." unique_id=1912641771 instance=ExtResource("3_eglq2")]
+position = Vector2(189, -1197)
+
+[node name="Enemy6" parent="." unique_id=721184539 instance=ExtResource("3_eglq2")]
+position = Vector2(419, -2124)
+
+[node name="Enemy7" parent="." unique_id=1855635599 instance=ExtResource("3_eglq2")]
+position = Vector2(-185, -1234)
+
+[node name="Enemy8" parent="." unique_id=1007401178 instance=ExtResource("3_eglq2")]
+position = Vector2(400, -937)
+
+[node name="Enemy9" parent="." unique_id=459395580 instance=ExtResource("3_eglq2")]
+position = Vector2(769, -1305)
+
+[node name="Enemy10" parent="." unique_id=1247696966 instance=ExtResource("3_eglq2")]
+position = Vector2(357, -1630)
+
+[node name="Enemy11" parent="." unique_id=69241064 instance=ExtResource("3_eglq2")]
+position = Vector2(213, -616)
+
+[node name="Enemy12" parent="." unique_id=1447670345 instance=ExtResource("3_eglq2")]
+position = Vector2(-170, -1578)
