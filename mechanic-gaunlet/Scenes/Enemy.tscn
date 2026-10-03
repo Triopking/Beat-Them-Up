@@ -178,7 +178,7 @@ texture_filter = 1
 position = Vector2(1.9999952, -4.5000076)
 scale = Vector2(3.9375002, 2.109375)
 sprite_frames = SubResource("SpriteFrames_8ie3n")
-animation = &"attack"
+animation = &"walk"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
@@ -202,6 +202,7 @@ collision_mask = 3
 
 [node name="Leftup" type="RayCast2D" parent="Raycasts" unique_id=714335050]
 position = Vector2(-26, -46)
+enabled = false
 target_position = Vector2(-16, 0)
 collision_mask = 3
 
@@ -220,6 +221,7 @@ collision_mask = 3
 [node name="Rightup" type="RayCast2D" parent="Raycasts" unique_id=1306924960]
 position = Vector2(26, -46)
 rotation = -3.1415925
+enabled = false
 target_position = Vector2(-16, 3.8146973e-06)
 collision_mask = 3
 
@@ -242,8 +244,8 @@ one_shot = true
 libraries/ = SubResource("AnimationLibrary_kpr8r")
 
 [node name="FightLeft" type="Area2D" parent="." unique_id=1736307332]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 16
+collision_mask = 16
 
 [node name="Left" type="CollisionShape2D" parent="FightLeft" unique_id=424342615]
 position = Vector2(-60, 0)
@@ -252,8 +254,8 @@ disabled = true
 debug_color = Color(0.86817783, 0.35358018, 5.7756904e-07, 0.41960785)
 
 [node name="FightRight" type="Area2D" parent="." unique_id=57321425]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 16
+collision_mask = 16
 
 [node name="Right" type="CollisionShape2D" parent="FightRight" unique_id=591106808]
 position = Vector2(60, 0)

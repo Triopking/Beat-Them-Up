@@ -60,6 +60,7 @@ func _physics_process(delta: float) -> void:
 		if GlobalManager.GAUNTLET_MAX > GlobalManager.gauntlet_power:
 			GlobalManager.gauntlet_power += 1
 		GlobalManager.score += 100
+		GlobalManager.enemy_quantitiy -= 1
 	
 	# gravity
 	if not is_on_floor():
@@ -73,7 +74,7 @@ func _physics_process(delta: float) -> void:
 		invincibility.start()
 	
 	if target_right == true:
-		$AnimationPlayer.play("attackR")
+		animation()
 	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
@@ -111,21 +112,28 @@ func _on_invincibility_timeout() -> void:
 	$Area2D/CollisionShape2D.disabled = false
 
 func _on_fight_left_body_entered(body: Node2D) -> void:
+	
 	if body.is_in_group("player"):
 		target_left = true
 
 
 func _on_fight_left_body_exited(body: Node2D) -> void:
+	
 	if body.is_in_group("player"):
 		target_left = false
 
 
 func _on_fight_right_body_entered(body: Node2D) -> void:
+	
 	if body.is_in_group("player"):
 		target_right = true
 
 
 func _on_fight_right_body_exited(body: Node2D) -> void:
+	
 	if body.is_in_group("player"):
 		target_right = false
 	
+func animation():
+	$AnimationPlayer.play("attackR")
+	await $AnimationPlayer.animation_finished

@@ -31,6 +31,7 @@ window/stretch/aspect="expand"
 enemy=""
 player_hitbox=""
 player_attack=""
+player=""
 
 [input]
 
