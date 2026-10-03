@@ -39,6 +39,7 @@ func _physics_process(delta: float) -> void:
 	#when it is hit
 	if hit == true:
 		health =- 1
+		$Area2D/CollisionShape2D.disabled = true
 		$AnimationPlayer.play("vulnerable")
 		invincibility.start()
 	
@@ -56,13 +57,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+func _on_area_2d_area_shape_entered(area_rid, area_shape_index, local_shape_index, area: Area2D) -> void:
 	
 	if area.is_in_group("player_attack"):
 		hit = true
 
 
 func _on_invincibility_timeout() -> void:
+	print("wingus")
 	$AnimationPlayer.play("RESET")
 	hit = false
 	$Area2D/CollisionShape2D.disabled = false
