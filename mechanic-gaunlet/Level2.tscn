@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cyqaobfaallee"]
+
+[ext_resource type="PackedScene" uid="uid://b3uvs3f3bdbsi" path="res://Scenes/Enemy.tscn" id="1_s8dg4"]
+[ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_ex07k"]
+[ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="3_psxy2"]
+[ext_resource type="PackedScene" uid="uid://cy8oyr8xuewcl" path="res://Scenes/basic_shape-pass.tscn" id="4_ex07k"]
+
+[node name="Level2" type="Node2D" unique_id=1219431711]
+
+[node name="Enemy" parent="." unique_id=1843922582 instance=ExtResource("1_s8dg4")]
+position = Vector2(407, 241)
+
+[node name="Player" parent="." unique_id=1576769618 instance=ExtResource("2_ex07k")]
+position = Vector2(27, 171)
+
+[node name="Basic Shape" parent="." unique_id=115887287 instance=ExtResource("3_psxy2")]
+position = Vector2(242.00003, 361)
+scale = Vector2(23.437502, 1)
+
+[node name="Basic Shape2" parent="." unique_id=732599664 instance=ExtResource("3_psxy2")]
+position = Vector2(293, 145)
+scale = Vector2(1, 7.9687495)
+
+[node name="Basic Shape3" parent="." unique_id=1545358888 instance=ExtResource("3_psxy2")]
+position = Vector2(803, 166)
+scale = Vector2(1, 6.78125)
+
+[node name="Basic Shape4" parent="." unique_id=42185908 instance=ExtResource("4_ex07k")]
+position = Vector2(558, 267)
+scale = Vector2(1, 4.11111)
+
+[node name="Basic Shape5" parent="." unique_id=231859506 instance=ExtResource("4_ex07k")]
+position = Vector2(146, 256)
+scale = Vector2(1, 4.11111)
