@@ -7,8 +7,8 @@ extends CharacterBody2D
 @onready var right_down: RayCast2D = $Raycasts/RightDown
 @onready var rightup: RayCast2D = $Raycasts/Rightup
 @onready var right_middle: RayCast2D = $Raycasts/RightMiddle
-@onready var left_player: RayCast2D = $Raycasts/LeftPlayer
-@onready var right_player: RayCast2D = $Raycasts/RightPlayer
+
+
 
 
 
@@ -25,7 +25,8 @@ var health = 2
 
 
 var current_inv = false
-var target = false
+var target
+var lock = false
 
 #speed and gravity
 const SPEED = 10000.0
@@ -65,44 +66,30 @@ func _physics_process(delta: float) -> void:
 		current_inv = true
 		invincibility.start()
 	
-	if direction < 0:
-		$Icon.flip_h = true
-		leftup.enabled = true
-		left_down.enabled = true
-		left_middle.enabled = true
-		
-		right_middle.enabled = false
-		right_down.enabled = false
-		rightup.enabled = false
-	elif direction > 0:
-		$Icon.flip_h = false
-		leftup.enabled = false
-		left_down.enabled = false
-		left_middle.enabled = false
-		
-		rightup.enabled = true
-		right_middle.enabled = true
-		right_down.enabled = true
+	
 	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
 		direction = 1
+		
 		$Icon.flip_h = false
 	
 	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
 		direction = -1
+		
 		$Icon.flip_h = true
 	
+	
 	#detects player and attacks
-	if left_player.is_colliding() and target == false:
+	if  target == true and lock == false:
 		if direction > 0:
 			$Icon.flip_h = false
-		target = true
+		lock = true
 		attack_wait.start()
-	elif right_player.is_colliding() and target == false:
+	elif target == true and lock == false:
 		if direction < 0:
 			$Icon.flip_h = true
-		target = true
+		lock = true
 		attack_wait.start()
 	
 	#this is for receiving player attacks
@@ -124,9 +111,25 @@ func _on_invincibility_timeout() -> void:
 	current_inv = false
 	$AnimationPlayer.play("RESET")
 	$Area2D/CollisionShape2D.disabled = false
-	
+
+func _on_fight_left_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		target = true
 
 
-func _on_attack_wait_timeout() -> void:
+func _on_fight_left_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		target = false
+
+
+func _on_fight_right_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		target = true
+
+
+func _on_fight_right_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		target = false
+
+func play_attack():
 	$Icon.play("attack")
-	

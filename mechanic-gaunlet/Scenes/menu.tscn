@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhjw8e40seg8q"]
 
 [ext_resource type="Script" uid="uid://cikk6bhthtqyi" path="res://Scripts/menu.gd" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://bav12rrtwxdr7" path="res://art/game title.png" id="2_xhh6f"]
 
 [node name="Menu" type="Control" unique_id=512113670]
 layout_mode = 3
@@ -11,20 +12,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1rerr")
 
-[node name="Title" type="Label" parent="." unique_id=1400928113]
+[node name="Title" type="TextureRect" parent="." unique_id=91500960]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -304.0
-offset_top = 59.0
-offset_right = 330.0
-offset_bottom = 222.0
+offset_left = -549.0
+offset_top = -182.0
+offset_right = 553.22217
+offset_bottom = 438.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 93
-text = "Increadible Game Title"
+texture = ExtResource("2_xhh6f")
+expand_mode = 1
 
 [node name="Play" type="Button" parent="." unique_id=1644566602]
 layout_mode = 1
