@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b1bwcij1d00lh" path="res://Scenes/basic_shape.tscn" id="1_fu4at"]
 [ext_resource type="PackedScene" uid="uid://c5lu3brcca44q" path="res://Scenes/player.tscn" id="2_aqlmp"]
-[ext_resource type="PackedScene" uid="uid://dxh8id0537vft" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
-[ext_resource type="PackedScene" uid="uid://b8o7wkpeujrfh" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
+[ext_resource type="PackedScene" uid="uid://tovmxqxaodh0" path="res://Scenes/1d_shape.tscn" id="3_3qicx"]
+[ext_resource type="PackedScene" uid="uid://bct57s8qb4gy8" path="res://Scenes/background_shape.tscn" id="4_kin1b"]
 [ext_resource type="PackedScene" uid="uid://dy7omfv14myq6" path="res://Scenes/basic_polygon.tscn" id="5_kin1b"]
 [ext_resource type="PackedScene" uid="uid://b3uvs3f3bdbsi" path="res://Scenes/Enemy.tscn" id="6_8tugf"]
 

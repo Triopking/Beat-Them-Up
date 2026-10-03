@@ -42,6 +42,11 @@ func _physics_process(delta: float) -> void:
 		$Area2D/CollisionShape2D.disabled = true
 		$AnimationPlayer.play("vulnerable")
 		invincibility.start()
+	elif hit == false:
+		print("wingus")
+		$AnimationPlayer.play("RESET")
+		
+		$Area2D/CollisionShape2D.disabled = false
 	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding():
@@ -64,7 +69,4 @@ func _on_area_2d_area_shape_entered(_area_rid: RID, area: Area2D, _area_shape_in
 
 
 func _on_invincibility_timeout() -> void:
-	print("wingus")
-	$AnimationPlayer.play("RESET")
 	hit = false
-	$Area2D/CollisionShape2D.disabled = false
