@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dy7omfv14myq6" path="res://Scenes/basic_polygon.tscn" id="5_kin1b"]
 [ext_resource type="PackedScene" uid="uid://b3uvs3f3bdbsi" path="res://Scenes/Enemy.tscn" id="6_8tugf"]
 [ext_resource type="PackedScene" uid="uid://ciw0vyg0d7ug3" path="res://Scenes/basic_collision.tscn" id="7_m3o2c"]
+[ext_resource type="PackedScene" uid="uid://cy8oyr8xuewcl" path="res://Scenes/basic_shape-pass.tscn" id="8_ffwbm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ccbq8"]
 
@@ -17,7 +18,7 @@ position = Vector2(3519.002, 743.00006)
 scale = Vector2(877.875, 2.96875)
 
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_aqlmp")]
-position = Vector2(7525, -1403)
+position = Vector2(788, 480)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1490564817]
 offset_left = 486.0
@@ -190,18 +191,6 @@ scale = Vector2(3.0781267, 1)
 position = Vector2(5525.9995, -831)
 scale = Vector2(3.0781267, 1)
 
-[node name="StaticBody2D" parent="." unique_id=1452010384 instance=ExtResource("7_m3o2c")]
-position = Vector2(994, 501)
-scale = Vector2(1.5715016, 14.883729)
-
-[node name="StaticBody2D2" parent="." unique_id=1125089378 instance=ExtResource("7_m3o2c")]
-position = Vector2(2202, 333)
-scale = Vector2(1.487395, 22.29854)
-
-[node name="StaticBody2D3" parent="." unique_id=14124535 instance=ExtResource("7_m3o2c")]
-position = Vector2(5484.0005, 299)
-scale = Vector2(1.487395, 22.29854)
-
 [node name="Basic Shape11" parent="." unique_id=218993927 instance=ExtResource("1_fu4at")]
 position = Vector2(8473, -235.99997)
 scale = Vector2(60.843754, 31.781252)
@@ -226,3 +215,15 @@ scale = Vector2(120.78125, 12.453125)
 [node name="StaticBody2D4" parent="." unique_id=701688565 instance=ExtResource("7_m3o2c")]
 position = Vector2(8163, -1423)
 scale = Vector2(1, 32.294464)
+
+[node name="Basic Shape16" parent="." unique_id=1606208753 instance=ExtResource("8_ffwbm")]
+position = Vector2(5484, 297)
+scale = Vector2(-0.45643443, 6.7443366)
+
+[node name="Basic Shape17" parent="." unique_id=879950868 instance=ExtResource("8_ffwbm")]
+position = Vector2(2203, 357.00003)
+scale = Vector2(-0.45643443, 6.7443366)
+
+[node name="Basic Shape18" parent="." unique_id=934829120 instance=ExtResource("8_ffwbm")]
+position = Vector2(995.00024, 483)
+scale = Vector2(-0.45643443, 6.7443366)

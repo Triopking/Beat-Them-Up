@@ -1,18 +1,9 @@
 [gd_scene format=3 uid="uid://cy8oyr8xuewcl"]
 
-[sub_resource type="Gradient" id="Gradient_gewca"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(2.2140146e-06, 0, 0.7180695, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_p8gn2"]
-gradient = SubResource("Gradient_gewca")
-fill_from = Vector2(0.10869565, 0.33043477)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poijg"]
 size = Vector2(64, 64)
 
 [node name="Basic Shape" type="Sprite2D" unique_id=115887287]
-texture = SubResource("GradientTexture2D_p8gn2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1203669558]
 collision_layer = 2
