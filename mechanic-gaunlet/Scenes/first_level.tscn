@@ -111,9 +111,9 @@ rotation = -0.5235988
 scale = Vector2(12.818855, 1.0093079)
 
 [node name="1D_Shape7" parent="World" unique_id=973582437 instance=ExtResource("3_3qicx")]
-position = Vector2(6023.894, 217.07759)
-rotation = 0.5235988
-scale = Vector2(12.610613, 1.038784)
+position = Vector2(5974.86, 220.42682)
+rotation = 0.59710336
+scale = Vector2(11.441369, 1.068698)
 
 [node name="1D_Shape8" parent="World" unique_id=1242839848 instance=ExtResource("3_3qicx")]
 position = Vector2(5994.038, -612.3225)
@@ -145,9 +145,9 @@ position = Vector2(4637.5, -1532)
 scale = Vector2(26.828125, 34.750004)
 
 [node name="1D_Shape9" parent="World" unique_id=1361944809 instance=ExtResource("3_3qicx")]
-position = Vector2(5989, -1034.0001)
+position = Vector2(5980.0664, -1028.1631)
 rotation = -0.5235988
-scale = Vector2(12.806992, 0.9850862)
+scale = Vector2(12.4740095, 0.96670675)
 
 [node name="Basic Shape14" parent="World" unique_id=2117288368 instance=ExtResource("1_fu4at")]
 position = Vector2(6712.5, -1222)
