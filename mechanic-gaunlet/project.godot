@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Global="*uid://h5m0lfu1to6c"
 GlobalManager="*uid://h5m0lfu1to6c"
 
 [display]
