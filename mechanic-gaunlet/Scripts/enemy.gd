@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var right_down: RayCast2D = $Raycasts/RightDown
 @onready var rightup: RayCast2D = $Raycasts/Rightup
 @onready var right_middle: RayCast2D = $Raycasts/RightMiddle
+@onready var left_player: RayCast2D = $Raycasts/LeftPlayer
+@onready var right_player: RayCast2D = $Raycasts/RightPlayer
 
 
 
@@ -19,9 +21,11 @@ var health = 2
 @onready var invincibility: Timer = $Invincibility
 @onready var attack_duration: Timer = $AttackDuration
 @onready var attack_cooldown: Timer = $AttackCooldown
+@onready var attack_wait: Timer = $AttackWait
 
 
 var current_inv = false
+var target = false
 
 #speed and gravity
 const SPEED = 10000.0
@@ -29,6 +33,7 @@ const JUMP_VELOCITY = -400.0
 
 var hit
 var direction
+
 
 func _ready() -> void:
 	$AnimationPlayer.play("RESET")
@@ -60,6 +65,24 @@ func _physics_process(delta: float) -> void:
 		current_inv = true
 		invincibility.start()
 	
+	if direction < 0:
+		$Icon.flip_h = true
+		leftup.enabled = true
+		left_down.enabled = true
+		left_middle.enabled = true
+		
+		right_middle.enabled = false
+		right_down.enabled = false
+		rightup.enabled = false
+	elif direction > 0:
+		$Icon.flip_h = false
+		leftup.enabled = false
+		left_down.enabled = false
+		left_middle.enabled = false
+		
+		rightup.enabled = true
+		right_middle.enabled = true
+		right_down.enabled = true
 	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
@@ -71,8 +94,16 @@ func _physics_process(delta: float) -> void:
 		$Icon.flip_h = true
 	
 	#detects player and attacks
-	#if left_middle.is_colliding():
-		
+	if left_player.is_colliding() and target == false:
+		if direction > 0:
+			$Icon.flip_h = false
+		target = true
+		attack_wait.start()
+	elif right_player.is_colliding() and target == false:
+		if direction < 0:
+			$Icon.flip_h = true
+		target = true
+		attack_wait.start()
 	
 	#this is for receiving player attacks
 	
@@ -93,4 +124,9 @@ func _on_invincibility_timeout() -> void:
 	current_inv = false
 	$AnimationPlayer.play("RESET")
 	$Area2D/CollisionShape2D.disabled = false
+	
+
+
+func _on_attack_wait_timeout() -> void:
+	$Icon.play("attack")
 	
