@@ -73,7 +73,8 @@ func _on_area_2d_area_shape_entered(_area_rid: RID, area: Area2D, _area_shape_in
 
 func _on_invincibility_timeout() -> void:
 	hit = false
+	print(health)
 	current_inv = false
 	$AnimationPlayer.play("RESET")
 	$Area2D/CollisionShape2D.disabled = false
-	print("egg")
+	
