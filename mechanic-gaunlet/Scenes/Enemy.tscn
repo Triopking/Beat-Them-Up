@@ -73,8 +73,17 @@ debug_color = Color(0.8265024, 0.001577341, 0.95403486, 0.41960785)
 [node name="LeftDown" type="RayCast2D" parent="." unique_id=1610423344]
 position = Vector2(-26, 23)
 
+[node name="Leftup" type="RayCast2D" parent="." unique_id=714335050]
+position = Vector2(-26, -46)
+target_position = Vector2(-30, 0)
+
 [node name="RightDown" type="RayCast2D" parent="." unique_id=167452373]
 position = Vector2(26, 23)
+
+[node name="Rightup" type="RayCast2D" parent="." unique_id=1306924960]
+position = Vector2(26, -46)
+rotation = 3.1415927
+target_position = Vector2(-30, 0)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1520210631]
 debug_enabled = true
