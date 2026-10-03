@@ -66,37 +66,19 @@ func _physics_process(delta: float) -> void:
 		current_inv = true
 		invincibility.start()
 	
-	if direction < 0:
-		$Icon.flip_h = true
-		leftup.enabled = true
-		left_down.enabled = true
-		left_middle.enabled = true
-		$FightLeft/Left.disabled = false
-		
-		right_middle.enabled = false
-		right_down.enabled = false
-		rightup.enabled = false
-		$FightRight/Right.disabled = true
-	elif direction > 0:
-		$Icon.flip_h = false
-		leftup.enabled = false
-		left_down.enabled = false
-		left_middle.enabled = false
-		$FightLeft/Left.disabled = true
-		
-		rightup.enabled = true
-		right_middle.enabled = true
-		right_down.enabled = true
-		$FightRight/Right.disabled = false
+	
 	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
 		direction = 1
+		
 		$Icon.flip_h = false
 	
 	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
 		direction = -1
+		
 		$Icon.flip_h = true
+	
 	
 	#detects player and attacks
 	if  target == true and lock == false:
@@ -129,13 +111,6 @@ func _on_invincibility_timeout() -> void:
 	current_inv = false
 	$AnimationPlayer.play("RESET")
 	$Area2D/CollisionShape2D.disabled = false
-	
-
-
-func _on_attack_wait_timeout() -> void:
-	$Icon.play("attack")
-	
-
 
 func _on_fight_left_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -155,3 +130,6 @@ func _on_fight_right_body_entered(body: Node2D) -> void:
 func _on_fight_right_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		target = false
+
+func play_attack():
+	$Icon.play("attack")

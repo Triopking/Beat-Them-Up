@@ -103,6 +103,24 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_kpr8r"]
+resource_name = "attack"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.36666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_attack"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_xeo28"]
 resource_name = "vulnerable"
 length = 1.5
@@ -123,6 +141,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kpr8r"]
 _data = {
 &"RESET": SubResource("Animation_wovta"),
+&"attack": SubResource("Animation_kpr8r"),
 &"vulnerable": SubResource("Animation_xeo28")
 }
 
@@ -151,6 +170,8 @@ scale = Vector2(3.9375002, 2.109375)
 sprite_frames = SubResource("SpriteFrames_8ie3n")
 animation = &"attack"
 autoplay = "walk"
+frame = 4
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
 shape = SubResource("CapsuleShape2D_8ie3n")
@@ -213,6 +234,8 @@ one_shot = true
 libraries/ = SubResource("AnimationLibrary_kpr8r")
 
 [node name="FightLeft" type="Area2D" parent="." unique_id=1736307332]
+collision_layer = 4
+collision_mask = 4
 
 [node name="Left" type="CollisionShape2D" parent="FightLeft" unique_id=424342615]
 position = Vector2(-60, 0)
@@ -224,6 +247,8 @@ scale = Vector2(0.75, 1.75)
 texture = SubResource("GradientTexture2D_8ie3n")
 
 [node name="FightRight" type="Area2D" parent="." unique_id=57321425]
+collision_layer = 4
+collision_mask = 4
 
 [node name="Right" type="CollisionShape2D" parent="FightRight" unique_id=591106808]
 position = Vector2(60, 0)
@@ -248,4 +273,3 @@ one_shot = true
 [connection signal="body_exited" from="FightLeft" to="." method="_on_fight_left_body_exited"]
 [connection signal="body_entered" from="FightRight" to="." method="_on_fight_right_body_entered"]
 [connection signal="body_exited" from="FightRight" to="." method="_on_fight_right_body_exited"]
-[connection signal="timeout" from="AttackWait" to="." method="_on_attack_wait_timeout"]
