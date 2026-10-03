@@ -128,7 +128,6 @@ tile_map_data = PackedByteArray("AAAQAAQAAQAAAAAAAAARAAQAAQAAAAAAAAASAAQAAQAAAAA
 tile_set = SubResource("TileSet_myf5j")
 
 [node name="World" type="Node2D" parent="." unique_id=1916299635]
-visible = false
 
 [node name="Basic Shape2" parent="World" unique_id=391385206 instance=ExtResource("1_fu4at")]
 position = Vector2(1438.2501, -96)
