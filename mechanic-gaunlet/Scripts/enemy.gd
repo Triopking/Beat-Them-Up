@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	
 	#when it is hit
 	if hit == true and not current_inv:
-		health =- 1
+		health -= 1
 		print(health)
 		$AnimationPlayer.play("vulnerable")
 		current_inv = true
