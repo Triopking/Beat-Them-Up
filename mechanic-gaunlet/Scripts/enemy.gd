@@ -70,6 +70,10 @@ func _physics_process(delta: float) -> void:
 		direction = -1
 		$Icon.flip_h = true
 	
+	#detects player and attacks
+	#if left_middle.is_colliding():
+		
+	
 	#this is for receiving player attacks
 	
 	velocity.x = direction * SPEED * delta

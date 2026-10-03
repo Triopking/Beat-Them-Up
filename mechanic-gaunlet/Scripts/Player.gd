@@ -12,6 +12,8 @@ const JUMP_VELOCITY = -400.0
 @onready var attack_cooldown: Timer = $AttackCooldown
 var cool = true
 var just = true
+#image
+@onready var icon: AnimatedSprite2D = $Icon
 
 func _ready() -> void:
 	#side 1
@@ -53,11 +55,17 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("AttackR") and just == true:
 			$Side1/CollisionShape2D.disabled = false
 			just = false
+			if direction == -1:
+				icon.flip_h = false
+			play_animation()
 			$Side1/CollisionShape2D/Sprite2D.visible = true
 			attack_duration.start()
 		elif Input.is_action_just_pressed("AttackL") and just == true:
 			$Side2/CollisionShape2D.disabled = false
 			just = false
+			if direction == 1:
+				icon.flip_h = true
+			play_animation()
 			$Side2/CollisionShape2D/Sprite2D.visible = true
 			attack_duration.start()
 	
@@ -87,3 +95,6 @@ func _on_attack_duration_timeout() -> void:
 func _on_attack_cooldown_timeout() -> void:
 	cool = true
 	just = true
+
+func play_animation():
+	$Icon.play("Attack1")

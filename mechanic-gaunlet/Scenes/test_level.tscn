@@ -14,6 +14,9 @@ gradient = SubResource("Gradient_iti4p")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8ie3n"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pc1f"]
+size = Vector2(21, 2776)
+
 [sub_resource type="Gradient" id="Gradient_dtjkg"]
 offsets = PackedFloat32Array(1)
 colors = PackedColorArray(2.2140146e-06, 0, 0.7180695, 1)
@@ -64,6 +67,10 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2050622443]
 position = Vector2(536, 648)
 shape = SubResource("WorldBoundaryShape2D_8ie3n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=709652454]
+position = Vector2(1161.5, -733)
+shape = SubResource("RectangleShape2D_3pc1f")
 
 [node name="House" type="Node2D" parent="." unique_id=1303001255]
 position = Vector2(-272, 1)
@@ -151,7 +158,7 @@ position = Vector2(599.25, 223)
 shape = SubResource("RectangleShape2D_enujx")
 
 [node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
-position = Vector2(621, 136)
+position = Vector2(162, 573)
 
 [node name="Enemy2" parent="." unique_id=1006530297 instance=ExtResource("3_eglq2")]
 position = Vector2(-272, -577)
@@ -160,16 +167,16 @@ position = Vector2(-272, -577)
 position = Vector2(1024, -919)
 
 [node name="Enemy4" parent="." unique_id=424170554 instance=ExtResource("3_eglq2")]
-position = Vector2(158, -1504)
+position = Vector2(422, -1568)
 
 [node name="Enemy5" parent="." unique_id=1912641771 instance=ExtResource("3_eglq2")]
-position = Vector2(189, -1197)
+position = Vector2(161, -2140)
 
 [node name="Enemy6" parent="." unique_id=721184539 instance=ExtResource("3_eglq2")]
-position = Vector2(419, -2124)
+position = Vector2(1057, -2061)
 
 [node name="Enemy7" parent="." unique_id=1855635599 instance=ExtResource("3_eglq2")]
-position = Vector2(-185, -1234)
+position = Vector2(-58, -1105)
 
 [node name="Enemy8" parent="." unique_id=1007401178 instance=ExtResource("3_eglq2")]
 position = Vector2(400, -937)
@@ -178,10 +185,10 @@ position = Vector2(400, -937)
 position = Vector2(769, -1305)
 
 [node name="Enemy10" parent="." unique_id=1247696966 instance=ExtResource("3_eglq2")]
-position = Vector2(357, -1630)
+position = Vector2(775, -1795)
 
 [node name="Enemy11" parent="." unique_id=69241064 instance=ExtResource("3_eglq2")]
 position = Vector2(213, -616)
 
 [node name="Enemy12" parent="." unique_id=1447670345 instance=ExtResource("3_eglq2")]
-position = Vector2(-170, -1578)
+position = Vector2(105, -1710)
