@@ -145,4 +145,4 @@ blend_mode = 1
 position = Vector2(162, 573)
 
 [node name="Spawner" parent="." unique_id=1308156847 instance=ExtResource("5_7w7ni")]
-position = Vector2(603, 122)
+position = Vector2(55, 551)

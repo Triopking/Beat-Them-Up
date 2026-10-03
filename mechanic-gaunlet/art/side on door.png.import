@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxc51hif5w50x"
-path="res://.godot/imported/YES UP.png-194d590d90a50269440f18703a5d51ed.ctex"
+uid="uid://s7cukid255i7"
+path="res://.godot/imported/side on door.png-0d848f1416b655da80bcf63589ed5de3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/YES UP.png"
-dest_files=["res://.godot/imported/YES UP.png-194d590d90a50269440f18703a5d51ed.ctex"]
+source_file="res://art/side on door.png"
+dest_files=["res://.godot/imported/side on door.png-0d848f1416b655da80bcf63589ed5de3.ctex"]
 
 [params]
 

@@ -37,7 +37,7 @@ var direction
 
 func _ready() -> void:
 	$AnimationPlayer.play("RESET")
-	Global.enemy_quantitiy += 1
+	GlobalManager.enemy_quantitiy += 1
 	var rdirection = randi()%2
 	if rdirection == 0:
 		$FightRight/Right.disabled = false
@@ -57,7 +57,8 @@ func _physics_process(delta: float) -> void:
 	#if enemy has no health left
 	if health <= 0:
 		$CollisionShape2D.disabled = true
-		GlobalManager.gauntlet_power += 1
+		if GlobalManager.GAUNTLET_MAX > GlobalManager.gauntlet_power:
+			GlobalManager.gauntlet_power += 1
 		GlobalManager.score += 100
 	
 	# gravity

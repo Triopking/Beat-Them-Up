@@ -121,18 +121,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("FightRight/Right:disabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_kpr8r"]
 resource_name = "attackR"
@@ -148,18 +136,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("FightRight/Right:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.09383762, 0.93333334),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_xeo28"]
@@ -226,12 +202,12 @@ collision_mask = 3
 
 [node name="Leftup" type="RayCast2D" parent="Raycasts" unique_id=714335050]
 position = Vector2(-26, -46)
-target_position = Vector2(-30, 0)
+target_position = Vector2(-16, 0)
 collision_mask = 3
 
 [node name="LeftMiddle" type="RayCast2D" parent="Raycasts" unique_id=2076948259]
 position = Vector2(-26, 0)
-target_position = Vector2(-30, 0)
+target_position = Vector2(-16, 0)
 collision_mask = 3
 collide_with_areas = true
 collide_with_bodies = false
@@ -244,13 +220,13 @@ collision_mask = 3
 [node name="Rightup" type="RayCast2D" parent="Raycasts" unique_id=1306924960]
 position = Vector2(26, -46)
 rotation = -3.1415925
-target_position = Vector2(-30, 0)
+target_position = Vector2(-16, 3.8146973e-06)
 collision_mask = 3
 
 [node name="RightMiddle" type="RayCast2D" parent="Raycasts" unique_id=193811426]
 position = Vector2(26, 0)
 rotation = -3.1415925
-target_position = Vector2(-30, 0)
+target_position = Vector2(-16, 2.415933e-06)
 collision_mask = 3
 collide_with_areas = true
 collide_with_bodies = false
@@ -282,6 +258,7 @@ collision_mask = 4
 [node name="Right" type="CollisionShape2D" parent="FightRight" unique_id=591106808]
 position = Vector2(60, 0)
 shape = SubResource("RectangleShape2D_flbuq")
+disabled = true
 debug_color = Color(0.86817783, 0.35358018, 5.7756904e-07, 0.41960785)
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
