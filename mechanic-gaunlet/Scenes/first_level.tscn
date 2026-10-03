@@ -17,7 +17,7 @@ position = Vector2(3519.002, 743.00006)
 scale = Vector2(877.875, 2.96875)
 
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_aqlmp")]
-position = Vector2(543, 561)
+position = Vector2(815, 571)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1490564817]
 offset_left = 486.0
@@ -155,17 +155,35 @@ position = Vector2(3415, 355)
 position = Vector2(1223, 548)
 
 [node name="1D_Shape" parent="." unique_id=1714603602 instance=ExtResource("3_3qicx")]
-position = Vector2(5717.072, 475.61572)
+position = Vector2(6175.8564, 477.7128)
 rotation = -0.5235988
 scale = Vector2(3.9615173, 1)
 
+[node name="1D_Shape3" parent="." unique_id=1075133307 instance=ExtResource("3_3qicx")]
+position = Vector2(6240.925, 156.52675)
+rotation = -0.5235988
+scale = Vector2(5.3661013, 1)
+
 [node name="1D_Shape2" parent="." unique_id=973582437 instance=ExtResource("3_3qicx")]
-position = Vector2(5761.965, 321.53775)
+position = Vector2(6217, 330.00018)
+rotation = 0.5235988
+scale = Vector2(5.6201262, 1)
+
+[node name="1D_Shape4" parent="." unique_id=1242839848 instance=ExtResource("3_3qicx")]
+position = Vector2(6215, -13.000183)
 rotation = 0.5235988
 scale = Vector2(5.6201262, 1)
 
 [node name="Basic Shape8" parent="." unique_id=1132007953 instance=ExtResource("1_fu4at")]
-position = Vector2(5908.5, 416)
+position = Vector2(6367.2847, 418.09708)
+scale = Vector2(3.0781267, 1)
+
+[node name="Basic Shape9" parent="." unique_id=1951281990 instance=ExtResource("1_fu4at")]
+position = Vector2(5978, 243)
+scale = Vector2(3.0781267, 1)
+
+[node name="Basic Shape10" parent="." unique_id=1122030222 instance=ExtResource("1_fu4at")]
+position = Vector2(6462.9995, 80)
 scale = Vector2(3.0781267, 1)
 
 [node name="StaticBody2D" parent="." unique_id=1452010384 instance=ExtResource("7_m3o2c")]
