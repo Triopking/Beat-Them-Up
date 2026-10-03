@@ -30,11 +30,13 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta * 1.5
 		if Input.is_action_just_pressed("Jump") and djump == 1:
 			velocity.y = JUMP_VELOCITY * 1.5
+			$Icon.play("Jump")
 			djump = 0
 
 	# Jumping
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		djump = 1
+		$Icon.play("Jump")
 		velocity.y = JUMP_VELOCITY * 1.5
 	
 	#changing direction

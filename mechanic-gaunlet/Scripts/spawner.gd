@@ -9,11 +9,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if Global.enemy_quantitiy < Global.ENEMY_MAX:
+		$Timer.start()
 
 
 func _on_timer_timeout() -> void:
-	if Global.enemy_quantitiy < Global.ENEMY_MAX:
-		var ene = enemy.instantiate()
-		ene.position = position
-		get_parent().add_child(ene)
+	
+	var ene = enemy.instantiate()
+	ene.position = position
+	get_parent().add_child(ene)

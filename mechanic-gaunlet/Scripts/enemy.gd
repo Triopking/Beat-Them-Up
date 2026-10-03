@@ -23,7 +23,8 @@ var health = 2
 
 
 var current_inv = false
-var target
+var target_right
+var target_left
 var lock = false
 
 #speed and gravity
@@ -70,7 +71,8 @@ func _physics_process(delta: float) -> void:
 		current_inv = true
 		invincibility.start()
 	
-	
+	if target_right == true:
+		$AnimationPlayer.play("attackR")
 	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
@@ -109,20 +111,20 @@ func _on_invincibility_timeout() -> void:
 
 func _on_fight_left_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = true
+		target_left = true
 
 
 func _on_fight_left_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = false
+		target_left = false
 
 
 func _on_fight_right_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = true
+		target_right = true
 
 
 func _on_fight_right_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = false
+		target_right = false
 	
