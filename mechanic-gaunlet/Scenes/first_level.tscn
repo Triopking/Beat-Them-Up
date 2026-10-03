@@ -158,7 +158,7 @@ position = Vector2(8990, -2067.5)
 scale = Vector2(120.78125, 12.453125)
 
 [node name="StaticBody2D4" parent="World" unique_id=701688565 instance=ExtResource("7_m3o2c")]
-position = Vector2(8163, -1423)
+position = Vector2(8134, -1424.0001)
 scale = Vector2(1, 32.294464)
 
 [node name="StaticBody2D5" parent="World" unique_id=1452010384 instance=ExtResource("7_m3o2c")]
