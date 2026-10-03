@@ -141,8 +141,10 @@ shape = SubResource("RectangleShape2D_myf5j")
 color = Color(0.5079715, 0.5079715, 0.5079715, 1)
 blend_mode = 1
 
-[node name="Enemy" parent="." unique_id=1950458699 instance=ExtResource("3_eglq2")]
-position = Vector2(162, 573)
+[node name="Enemies" type="Node2D" parent="." unique_id=1379403621]
 
-[node name="Spawner" parent="." unique_id=1308156847 instance=ExtResource("5_7w7ni")]
-position = Vector2(55, 551)
+[node name="Spawner" parent="Enemies" unique_id=1308156847 instance=ExtResource("5_7w7ni")]
+position = Vector2(1103, 476)
+
+[node name="Enemy" parent="Enemies" unique_id=1950458699 instance=ExtResource("3_eglq2")]
+position = Vector2(162, 573)
