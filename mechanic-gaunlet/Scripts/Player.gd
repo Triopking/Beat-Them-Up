@@ -57,7 +57,6 @@ func _physics_process(delta: float) -> void:
 			just = false
 			if direction == -1:
 				icon.flip_h = false
-			play_animation()
 			$Side1/CollisionShape2D/Sprite2D.visible = true
 			attack_duration.start()
 		elif Input.is_action_just_pressed("AttackL") and just == true:
@@ -65,7 +64,7 @@ func _physics_process(delta: float) -> void:
 			just = false
 			if direction == 1:
 				icon.flip_h = true
-			play_animation()
+			
 			$Side2/CollisionShape2D/Sprite2D.visible = true
 			attack_duration.start()
 	
