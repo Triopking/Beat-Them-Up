@@ -18,7 +18,7 @@ position = Vector2(3519.002, 743.00006)
 scale = Vector2(877.875, 2.96875)
 
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_jafar")]
-position = Vector2(788, 480)
+position = Vector2(659, 538)
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1490564817]
 offset_left = 486.0
@@ -153,7 +153,7 @@ polygon = PackedVector2Array(0, 0, 71, 0, 74.49696, 23.8625, 74.248795, 60.37499
 position = Vector2(3415, 355)
 
 [node name="Enemy2" parent="." unique_id=1471557545 instance=ExtResource("6_pm1jk")]
-position = Vector2(1223, 548)
+position = Vector2(1340, 543)
 
 [node name="1D_Shape" parent="." unique_id=1714603602 instance=ExtResource("3_prvm8")]
 position = Vector2(6175.7417, 477.05392)
@@ -227,3 +227,12 @@ scale = Vector2(-0.45643443, 6.7443366)
 [node name="Basic Shape18" parent="." unique_id=934829120 instance=ExtResource("8_jafar")]
 position = Vector2(995.00024, 483)
 scale = Vector2(-0.45643443, 6.7443366)
+
+[node name="Enemy3" parent="." unique_id=713609009 instance=ExtResource("6_pm1jk")]
+position = Vector2(5180, 167)
+
+[node name="Enemy4" parent="." unique_id=913931915 instance=ExtResource("6_pm1jk")]
+position = Vector2(4993, 164)
+
+[node name="Enemy5" parent="." unique_id=502962156 instance=ExtResource("6_pm1jk")]
+position = Vector2(4827, 163)
