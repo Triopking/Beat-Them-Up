@@ -84,7 +84,7 @@ script = ExtResource("1_cvnsp")
 
 [node name="Icon" type="AnimatedSprite2D" parent="." unique_id=20136378]
 modulate = Color(0.44806695, 0.44806695, 0.44806695, 1)
-position = Vector2(-1.0000033, -14.999999)
+position = Vector2(0, -14)
 scale = Vector2(3.53125, 2.46875)
 sprite_frames = SubResource("SpriteFrames_vgqql")
 animation = &"idle"

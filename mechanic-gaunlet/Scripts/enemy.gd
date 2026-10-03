@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var right_down: RayCast2D = $RightDown
 @onready var leftup: RayCast2D = $Leftup
 @onready var rightup: RayCast2D = $Rightup
+@onready var right_middle: RayCast2D = $RightMiddle
+@onready var left_middle: RayCast2D = $LeftMiddle
 
 #@onready var player: player
 
@@ -52,10 +54,10 @@ func _physics_process(delta: float) -> void:
 	
 	
 	#when the raycasts on the left detect something, it would switch directions
-	if not left_down.is_colliding() or leftup.is_colliding():
+	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
 		direction = 1
 	
-	elif not right_down.is_colliding() or rightup.is_colliding():
+	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
 		direction = -1
 	
 	#this is for receiving player attacks
