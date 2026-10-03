@@ -111,9 +111,9 @@ rotation = -0.5235988
 scale = Vector2(12.818855, 1.0093079)
 
 [node name="1D_Shape7" parent="World" unique_id=973582437 instance=ExtResource("3_3qicx")]
-position = Vector2(6023.894, 217.07759)
-rotation = 0.5235988
-scale = Vector2(12.610613, 1.038784)
+position = Vector2(5974.86, 220.42682)
+rotation = 0.59710336
+scale = Vector2(11.441369, 1.068698)
 
 [node name="1D_Shape8" parent="World" unique_id=1242839848 instance=ExtResource("3_3qicx")]
 position = Vector2(5994.038, -612.3225)
@@ -145,9 +145,9 @@ position = Vector2(4637.5, -1532)
 scale = Vector2(26.828125, 34.750004)
 
 [node name="1D_Shape9" parent="World" unique_id=1361944809 instance=ExtResource("3_3qicx")]
-position = Vector2(5989, -1034.0001)
+position = Vector2(5980.0664, -1028.1631)
 rotation = -0.5235988
-scale = Vector2(12.806992, 0.9850862)
+scale = Vector2(12.4740095, 0.96670675)
 
 [node name="Basic Shape14" parent="World" unique_id=2117288368 instance=ExtResource("1_fu4at")]
 position = Vector2(6712.5, -1222)
@@ -158,7 +158,11 @@ position = Vector2(8990, -2067.5)
 scale = Vector2(120.78125, 12.453125)
 
 [node name="StaticBody2D4" parent="World" unique_id=701688565 instance=ExtResource("7_m3o2c")]
-position = Vector2(8163, -1423)
+position = Vector2(8134, -1424.0001)
+scale = Vector2(1, 32.294464)
+
+[node name="StaticBody2D5" parent="World" unique_id=1452010384 instance=ExtResource("7_m3o2c")]
+position = Vector2(6557, -1469.0001)
 scale = Vector2(1, 32.294464)
 
 [node name="Basic Shape16" parent="World" unique_id=1606208753 instance=ExtResource("8_ffwbm")]
@@ -240,3 +244,10 @@ position = Vector2(1223, 548)
 [node name="Basic Shape2" parent="." unique_id=1536438959 instance=ExtResource("1_fu4at")]
 position = Vector2(2200.5, 662)
 scale = Vector2(4.953125, 1)
+
+[node name="Background_shape" parent="." unique_id=1714390325 instance=ExtResource("4_kin1b")]
+position = Vector2(6512, -1681)
+polygon = PackedVector2Array(0, 0, 166, -32, 709, 345, 498, 173, 426, 93, 128, -8, 303, -39, 1624, -32, 834, 288, 968, 255, 1502, -18, 1641, 7, 1641, 428, -24, 446)
+
+[node name="Enemy3" parent="." unique_id=1587328729 instance=ExtResource("6_8tugf")]
+position = Vector2(7246, -1382)
