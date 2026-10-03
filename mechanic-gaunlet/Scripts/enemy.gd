@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var right_down: RayCast2D = $RightDown
 @onready var leftup: RayCast2D = $Leftup
 @onready var rightup: RayCast2D = $Rightup
+@onready var right_middle: RayCast2D = $RightMiddle
+@onready var left_middle: RayCast2D = $LeftMiddle
 
 #@onready var player: player
 
@@ -35,7 +37,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	#if enemy has no health left
-	if health == 0:
+	if health <= 0:
 		$CollisionShape2D.disabled = true
 	
 	# gravity
@@ -44,18 +46,18 @@ func _physics_process(delta: float) -> void:
 	
 	#when it is hit
 	if hit == true and not current_inv:
-		health =- 1
-		$Area2D/CollisionShape2D.disabled = true
+		health -= 1
+		print(health)
 		$AnimationPlayer.play("vulnerable")
 		current_inv = true
 		invincibility.start()
 	
 	
 	#when the raycasts on the left detect something, it would switch directions
-	if not left_down.is_colliding() or leftup.is_colliding():
+	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
 		direction = 1
 	
-	elif not right_down.is_colliding() or rightup.is_colliding():
+	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
 		direction = -1
 	
 	#this is for receiving player attacks
@@ -73,7 +75,7 @@ func _on_area_2d_area_shape_entered(_area_rid: RID, area: Area2D, _area_shape_in
 
 func _on_invincibility_timeout() -> void:
 	hit = false
-	print(health)
+	
 	current_inv = false
 	$AnimationPlayer.play("RESET")
 	$Area2D/CollisionShape2D.disabled = false
