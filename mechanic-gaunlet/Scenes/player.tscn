@@ -120,6 +120,14 @@ colors = PackedColorArray(1, 1, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8ie3n"]
 gradient = SubResource("Gradient_6t5aa")
 
+[sub_resource type="Animation" id="Animation_6t5aa"]
+resource_name = "attackL"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vgqql"]
+_data = {
+&"attackL": SubResource("Animation_6t5aa")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=1843922582 groups=["player"]]
 script = ExtResource("1_cvnsp")
 
@@ -191,6 +199,9 @@ one_shot = true
 [node name="AttackCooldown" type="Timer" parent="." unique_id=730719387]
 wait_time = 0.3
 one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=415724446]
+libraries/ = SubResource("AnimationLibrary_vgqql")
 
 [connection signal="timeout" from="AttackDuration" to="." method="_on_attack_duration_timeout"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]

@@ -183,11 +183,6 @@ collision_mask = 3
 collide_with_areas = true
 collide_with_bodies = false
 
-[node name="LeftPlayer" type="RayCast2D" parent="Raycasts" unique_id=282985177]
-position = Vector2(-26, 0)
-target_position = Vector2(-30, 0)
-collision_mask = 4
-
 [node name="RightDown" type="RayCast2D" parent="Raycasts" unique_id=167452373]
 position = Vector2(26, 23)
 target_position = Vector2(0, 95.325)
@@ -207,12 +202,6 @@ collision_mask = 3
 collide_with_areas = true
 collide_with_bodies = false
 
-[node name="RightPlayer" type="RayCast2D" parent="Raycasts" unique_id=1285886128]
-position = Vector2(26, 0)
-rotation = -3.1415925
-target_position = Vector2(-30, 0)
-collision_mask = 3
-
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1520210631]
 debug_enabled = true
 debug_path_custom_color = Color(1, 0, 0, 1)
@@ -223,25 +212,25 @@ one_shot = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1593015839]
 libraries/ = SubResource("AnimationLibrary_kpr8r")
 
-[node name="Fight" type="Area2D" parent="." unique_id=1736307332]
+[node name="FightLeft" type="Area2D" parent="." unique_id=1736307332]
 
-[node name="Left" type="CollisionShape2D" parent="Fight" unique_id=424342615]
+[node name="Left" type="CollisionShape2D" parent="FightLeft" unique_id=424342615]
 position = Vector2(-60, 0)
 shape = SubResource("RectangleShape2D_8ie3n")
 debug_color = Color(0.86817783, 0.35358018, 5.7756904e-07, 0.41960785)
 
-[node name="LeftImage" type="Sprite2D" parent="Fight" unique_id=1085308350]
-position = Vector2(60, -1.66893e-06)
+[node name="LeftImage" type="Sprite2D" parent="FightLeft/Left" unique_id=1085308350]
 scale = Vector2(0.75, 1.75)
 texture = SubResource("GradientTexture2D_8ie3n")
 
-[node name="Right" type="CollisionShape2D" parent="Fight" unique_id=1789434840]
+[node name="FightRight" type="Area2D" parent="." unique_id=57321425]
+
+[node name="Right" type="CollisionShape2D" parent="FightRight" unique_id=591106808]
 position = Vector2(60, 0)
 shape = SubResource("RectangleShape2D_flbuq")
 debug_color = Color(0.86817783, 0.35358018, 5.7756904e-07, 0.41960785)
 
-[node name="RightImage" type="Sprite2D" parent="Fight/Right" unique_id=1487016115]
-position = Vector2(0, -1.66893e-06)
+[node name="RightImage" type="Sprite2D" parent="FightRight/Right" unique_id=307580248]
 scale = Vector2(0.75, 1.75)
 texture = SubResource("GradientTexture2D_8ie3n")
 
@@ -255,4 +244,8 @@ one_shot = true
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="timeout" from="Invincibility" to="." method="_on_invincibility_timeout"]
+[connection signal="body_entered" from="FightLeft" to="." method="_on_fight_left_body_entered"]
+[connection signal="body_exited" from="FightLeft" to="." method="_on_fight_left_body_exited"]
+[connection signal="body_entered" from="FightRight" to="." method="_on_fight_right_body_entered"]
+[connection signal="body_exited" from="FightRight" to="." method="_on_fight_right_body_exited"]
 [connection signal="timeout" from="AttackWait" to="." method="_on_attack_wait_timeout"]
