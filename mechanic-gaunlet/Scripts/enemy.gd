@@ -19,13 +19,12 @@ var health = 2
 
 #timers
 @onready var invincibility: Timer = $Invincibility
-@onready var attack_duration: Timer = $AttackDuration
-@onready var attack_cooldown: Timer = $AttackCooldown
-@onready var attack_wait: Timer = $AttackWait
+
 
 
 var current_inv = false
-var target
+var target_right
+var target_left
 var lock = false
 
 #speed and gravity
@@ -38,14 +37,20 @@ var direction
 
 func _ready() -> void:
 	$AnimationPlayer.play("RESET")
+	Global.enemy_quantitiy += 1
 	var rdirection = randi()%2
 	if rdirection == 0:
+		$FightRight/Right.disabled = false
+		$FightLeft/Left.disabled = true
 		direction = -1
 		$Icon.flip_h = true
 
 	elif rdirection == 1:
+		$FightRight/Right.disabled = true
+		$FightLeft/Left.disabled = false
 		direction = 1
 		$Icon.flip_h = false
+	
 	
 
 func _physics_process(delta: float) -> void:
@@ -66,31 +71,23 @@ func _physics_process(delta: float) -> void:
 		current_inv = true
 		invincibility.start()
 	
-	
+	if target_right == true:
+		$AnimationPlayer.play("attackR")
 	
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
 		direction = 1
-		
+		$FightRight/Right.disabled = false
+		$FightLeft/Left.disabled = true
 		$Icon.flip_h = false
 	
 	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
 		direction = -1
-		
+		$FightRight/Right.disabled = true
+		$FightLeft/Left.disabled = false
 		$Icon.flip_h = true
 	
 	
-	#detects player and attacks
-	if  target == true and lock == false:
-		if direction > 0:
-			$Icon.flip_h = false
-		lock = true
-		attack_wait.start()
-	elif target == true and lock == false:
-		if direction < 0:
-			$Icon.flip_h = true
-		lock = true
-		attack_wait.start()
 	
 	#this is for receiving player attacks
 	
@@ -114,22 +111,20 @@ func _on_invincibility_timeout() -> void:
 
 func _on_fight_left_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = true
+		target_left = true
 
 
 func _on_fight_left_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = false
+		target_left = false
 
 
 func _on_fight_right_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = true
+		target_right = true
 
 
 func _on_fight_right_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		target = false
-
-func play_attack():
-	$Icon.play("attack")
+		target_right = false
+	
