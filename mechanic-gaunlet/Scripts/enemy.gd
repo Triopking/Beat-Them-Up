@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
 #raycasts
-@onready var left_down: RayCast2D = $LeftDown
-@onready var right_down: RayCast2D = $RightDown
-@onready var leftup: RayCast2D = $Leftup
-@onready var rightup: RayCast2D = $Rightup
-@onready var right_middle: RayCast2D = $RightMiddle
-@onready var left_middle: RayCast2D = $LeftMiddle
+@onready var left_down: RayCast2D = $Raycasts/LeftDown
+@onready var leftup: RayCast2D = $Raycasts/Leftup
+@onready var left_middle: RayCast2D = $Raycasts/LeftMiddle
+@onready var right_down: RayCast2D = $Raycasts/RightDown
+@onready var rightup: RayCast2D = $Raycasts/Rightup
+@onready var right_middle: RayCast2D = $Raycasts/RightMiddle
+
+
 
 #@onready var player: player
 
@@ -15,6 +17,9 @@ var health = 2
 
 #timers
 @onready var invincibility: Timer = $Invincibility
+@onready var attack_duration: Timer = $AttackDuration
+@onready var attack_cooldown: Timer = $AttackCooldown
+
 
 var current_inv = false
 
@@ -30,15 +35,19 @@ func _ready() -> void:
 	var rdirection = randi()%2
 	if rdirection == 0:
 		direction = -1
+		$Icon.flip_h = true
 
 	elif rdirection == 1:
 		direction = 1
+		$Icon.flip_h = false
 	
 
 func _physics_process(delta: float) -> void:
 	#if enemy has no health left
 	if health <= 0:
 		$CollisionShape2D.disabled = true
+		GlobalManager.gauntlet_power += 1
+		GlobalManager.score += 100
 	
 	# gravity
 	if not is_on_floor():
@@ -47,7 +56,6 @@ func _physics_process(delta: float) -> void:
 	#when it is hit
 	if hit == true and not current_inv:
 		health -= 1
-		print(health)
 		$AnimationPlayer.play("vulnerable")
 		current_inv = true
 		invincibility.start()
@@ -56,9 +64,11 @@ func _physics_process(delta: float) -> void:
 	#when the raycasts on the left detect something, it would switch directions
 	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
 		direction = 1
+		$Icon.flip_h = false
 	
 	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
 		direction = -1
+		$Icon.flip_h = true
 	
 	#this is for receiving player attacks
 	

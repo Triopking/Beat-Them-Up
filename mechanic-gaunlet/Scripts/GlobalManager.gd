@@ -1,11 +1,11 @@
 extends Node
 
 #player's highscore by destroying stuff
-var score
+var score: int = 0
 
 #player's charged up gaunlet power
-var gauntlet_power
-const GAUNTLET_MAX = 100
+var gauntlet_power: int = 0
+const GAUNTLET_MAX: int = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
