@@ -5,7 +5,7 @@ var djump = 1
 
 const SPEED = 20000
 const TOPSPEED = 35000
-const JUMP_VELOCITY = -450.0
+const JUMP_VELOCITY = -550.0
 
 #timers
 
@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		await icon.animation_finished
 	
 	#changing direction
-	var direction
+	var direction = 1
 	if Input.is_action_pressed("Left"):
 		direction = -1
 		walking = true
@@ -55,47 +55,52 @@ func _physics_process(delta: float) -> void:
 		walking = true
 		icon.flip_h = false
 		icon.play("Walk")
-	elif attack == true or (Input.is_action_pressed("Right") and Input.is_action_pressed("Left")) :
+	elif attack == true:
+		walking = false
+	else:
 		walking = false
 	
 	
 	# attack
-	
-		if Input.is_action_just_pressed("AttackR") and attack == false:
-			attack = true
-			print("right attack - ")
-			$Side2/CollisionShape2D.disabled = false
-			
-			
-			$AnimationPlayer.play("attackR")
-			await $AnimationPlayer.animation_finished
-			print("attack finished")
-			
-			attack = false
-			
-		if Input.is_action_just_pressed("AttackL") and attack == false:
-			attack = true
-			print("left attack - ")
-			$Side2/CollisionShape2D.disabled = false
-			
-			
-			$AnimationPlayer.play("attackL")
-			await $AnimationPlayer.animation_finished
-			print("attack finished")
-			
-			attack = false
+
+	if Input.is_action_just_pressed("AttackR") and attack == false:
+		attack = true
+		print("right attack - ")
+		$Side2/CollisionShape2D.disabled = false
+		
+		
+		$AnimationPlayer.play("attackR")
+		await $AnimationPlayer.animation_finished
+		print("attack finished")
+		
+		attack = false
+		
+	if Input.is_action_just_pressed("AttackL") and attack == false:
+		attack = true
+		print("left attack - ")
+		$Side2/CollisionShape2D.disabled = false
+		
+		
+		$AnimationPlayer.play("attackL")
+		await $AnimationPlayer.animation_finished
+		print("attack finished")
+		
+		attack = false
 			
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	if direction and walking == true:
-		if direction and Input.is_action_pressed("Sprint"):
+	if  walking == true:
+		if Input.is_action_pressed("Sprint"):
 			velocity.x = direction * TOPSPEED * delta
 		else:
 			velocity.x = direction * SPEED * delta
-	if  Input.is_anything_pressed() == false:
-		#print("else at bottom is running")
-		icon.play("idle")
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+#		velocity.x = move_toward(velocity.x, 0, SPEED)
+		print(velocity.x)
+	else:
+		if attack == false:
+			#print("else at bottom is running")
+			icon.play("idle")
+			velocity.x = 0
 
 	move_and_slide()
