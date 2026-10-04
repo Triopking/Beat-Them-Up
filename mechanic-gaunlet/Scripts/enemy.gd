@@ -79,15 +79,22 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("attackR")
 		print("he")
 		await $AnimationPlayer.animation_finished
+		target_right = false
+	if target_left == true:
+		print("start")
+		$AnimationPlayer.play("attackL")
+		print("he")
+		await $AnimationPlayer.animation_finished
+		target_right = false
 	
 	#when the raycasts on the left detect something, it would switch directions
-	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
+	if not left_down.is_colliding() or left_middle.is_colliding():
 		direction = 1
 		$FightRight/Right.disabled = false
 		$FightLeft/Left.disabled = true
 		$Icon.flip_h = false
 	
-	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
+	elif not right_down.is_colliding() or right_middle.is_colliding():
 		direction = -1
 		$FightRight/Right.disabled = true
 		$FightLeft/Left.disabled = false
