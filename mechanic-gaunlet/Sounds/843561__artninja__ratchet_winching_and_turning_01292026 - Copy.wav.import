@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bx7es3m4nxf0h"
+path="res://.godot/imported/843561__artninja__ratchet_winching_and_turning_01292026 - Copy.wav-23b60c7f32c88b52aff68dc315cc86a2.sample"
+
+[deps]
+
+source_file="res://Sounds/843561__artninja__ratchet_winching_and_turning_01292026 - Copy.wav"
+dest_files=["res://.godot/imported/843561__artninja__ratchet_winching_and_turning_01292026 - Copy.wav-23b60c7f32c88b52aff68dc315cc86a2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

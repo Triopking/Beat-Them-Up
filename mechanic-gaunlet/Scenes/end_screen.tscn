@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dmoihqwgosc6o"]
 
+[ext_resource type="Script" uid="uid://l7eamw0p5yu5" path="res://Scripts/end_screen.gd" id="1_1gwaw"]
 [ext_resource type="Texture2D" uid="uid://kklb24iquj8m" path="res://art/WIN SCREEM.png" id="1_f2mtv"]
 
 [node name="EndScreen" type="Control" unique_id=1170961804]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1gwaw")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1298535463]
 layout_mode = 1
@@ -22,3 +24,8 @@ offset_bottom = 478.0
 grow_horizontal = 2
 texture = ExtResource("1_f2mtv")
 expand_mode = 1
+
+[node name="TextureButton" type="Button" parent="." unique_id=638806210]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

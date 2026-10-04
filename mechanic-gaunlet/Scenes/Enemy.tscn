@@ -298,7 +298,7 @@ collision_mask = 11
 
 [node name="LeftMiddle" type="RayCast2D" parent="Raycasts" unique_id=2076948259]
 position = Vector2(-26, 0)
-target_position = Vector2(-16, 0)
+target_position = Vector2(-34, 0)
 collision_mask = 11
 collide_with_areas = true
 collide_with_bodies = false
@@ -318,7 +318,7 @@ collision_mask = 3
 [node name="RightMiddle" type="RayCast2D" parent="Raycasts" unique_id=193811426]
 position = Vector2(26, 0)
 rotation = -3.1415925
-target_position = Vector2(-16, 2.415933e-06)
+target_position = Vector2(-34, 5.133857e-06)
 collision_mask = 11
 collide_with_areas = true
 collide_with_bodies = false
