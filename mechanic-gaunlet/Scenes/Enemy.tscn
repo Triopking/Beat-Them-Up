@@ -121,6 +121,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
 
 [sub_resource type="Animation" id="Animation_kpr8r"]
 resource_name = "attackR"
@@ -136,6 +148,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
 }
 
 [sub_resource type="Animation" id="Animation_xeo28"]
@@ -178,15 +202,15 @@ texture_filter = 1
 position = Vector2(1.9999952, -4.5000076)
 scale = Vector2(3.9375002, 2.109375)
 sprite_frames = SubResource("SpriteFrames_8ie3n")
-animation = &"walk"
+animation = &"attack"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
 shape = SubResource("CapsuleShape2D_8ie3n")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=203179390 groups=["enemy", "player"]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1009945780]
 position = Vector2(0, -3)
@@ -204,12 +228,12 @@ collision_mask = 3
 position = Vector2(-26, -46)
 enabled = false
 target_position = Vector2(-16, 0)
-collision_mask = 3
+collision_mask = 11
 
 [node name="LeftMiddle" type="RayCast2D" parent="Raycasts" unique_id=2076948259]
 position = Vector2(-26, 0)
 target_position = Vector2(-16, 0)
-collision_mask = 3
+collision_mask = 11
 collide_with_areas = true
 collide_with_bodies = false
 
@@ -229,7 +253,7 @@ collision_mask = 3
 position = Vector2(26, 0)
 rotation = -3.1415925
 target_position = Vector2(-16, 2.415933e-06)
-collision_mask = 3
+collision_mask = 11
 collide_with_areas = true
 collide_with_bodies = false
 
@@ -262,6 +286,8 @@ position = Vector2(60, 0)
 shape = SubResource("RectangleShape2D_flbuq")
 disabled = true
 debug_color = Color(0.86817783, 0.35358018, 5.7756904e-07, 0.41960785)
+
+[node name="AttackDelay" type="Timer" parent="." unique_id=1801260790]
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="timeout" from="Invincibility" to="." method="_on_invincibility_timeout"]

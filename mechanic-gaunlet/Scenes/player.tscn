@@ -207,8 +207,8 @@ texture_scale = 8.6
 metadata/_edit_lock_ = true
 
 [node name="Side1" type="Area2D" parent="." unique_id=1691279803 groups=["player_attack"]]
-collision_layer = 3
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Side1" unique_id=2142301736]
 position = Vector2(69, -2)
@@ -222,7 +222,8 @@ scale = Vector2(1.375, 1.7500002)
 texture = SubResource("GradientTexture2D_8ie3n")
 
 [node name="Side2" type="Area2D" parent="." unique_id=1834068732 groups=["player_attack"]]
-collision_layer = 2
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Side2" unique_id=1221857118]
 position = Vector2(-70, -2)
