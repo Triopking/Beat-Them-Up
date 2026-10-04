@@ -37,12 +37,13 @@ func _physics_process(delta: float) -> void:
 
 	# Jumping
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		djump = 1
+		
 		
 		velocity.y = JUMP_VELOCITY * 1
 		icon.play("Jump")
 		await icon.animation_finished
-	
+	if is_on_floor():
+		djump =1
 	#changing direction
 	var direction = 1
 	if Input.is_action_pressed("Left"):
