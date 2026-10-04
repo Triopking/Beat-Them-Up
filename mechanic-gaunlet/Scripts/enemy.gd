@@ -39,18 +39,19 @@ var direction
 func _ready() -> void:
 	$AnimationPlayer.play("RESET")
 	GlobalManager.enemy_quantitiy += 1
-	var rdirection = randi()%2
-	if rdirection == 0:
+	var rdirection = randi()%2+1
+	#left
+	if rdirection == 1:
 		$FightRight/Right.disabled = false
 		$FightLeft/Left.disabled = true
-		direction = -1
-		$Icon.flip_h = true
-
-	elif rdirection == 1:
-		$FightRight/Right.disabled = true
-		$FightLeft/Left.disabled = false
 		direction = 1
 		$Icon.flip_h = false
+#right
+	elif rdirection == 2:
+		$FightRight/Right.disabled = true
+		$FightLeft/Left.disabled = false
+		direction = -1
+		$Icon.flip_h = true
 	
 	
 
@@ -75,20 +76,26 @@ func _physics_process(delta: float) -> void:
 		invincibility.start()
 	
 	if target_right == true:
-		print("start")
+		
 		$AnimationPlayer.play("attackR")
-		print("he")
+		
 		await $AnimationPlayer.animation_finished
 		target_right = false
 	if target_left == true:
-		print("start")
+		
 		$AnimationPlayer.play("attackL")
-		print("he")
+		
 		await $AnimationPlayer.animation_finished
 		target_right = false
 	
 	#when the raycasts on the left detect something, it would switch directions
-	if not left_down.is_colliding() or left_middle.is_colliding():
+	if not left_down.is_colliding():
+		direction = 1
+		#print("egggs")
+		$FightRight/Right.disabled = false
+		$FightLeft/Left.disabled = true
+		$Icon.flip_h = false
+	elif left_middle.is_colliding():
 		direction = 1
 		$FightRight/Right.disabled = false
 		$FightLeft/Left.disabled = true
@@ -96,9 +103,12 @@ func _physics_process(delta: float) -> void:
 	
 	elif not right_down.is_colliding() or right_middle.is_colliding():
 		direction = -1
+		#print("egggs")
 		$FightRight/Right.disabled = true
 		$FightLeft/Left.disabled = false
 		$Icon.flip_h = true
+	elif right_middle.is_colliding():
+		print("edrfgr")
 	
 	$Icon.play("walk")
 	velocity.x = direction * SPEED * delta

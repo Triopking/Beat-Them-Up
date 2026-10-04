@@ -9,7 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if GlobalManager.enemy_quantitiy > GlobalManager.ENEMY_MAX:
+		print("faa")
 	
 
 
@@ -18,5 +19,4 @@ func _on_timer_timeout() -> void:
 		var ene = enemy.instantiate()
 		ene.position = position
 		get_parent().add_child(ene)
-	else:
-		pass
+	

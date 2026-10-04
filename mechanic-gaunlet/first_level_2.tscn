@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ciw0vyg0d7ug3" path="res://Scenes/basic_collision.tscn" id="7_gsdjy"]
 [ext_resource type="PackedScene" uid="uid://cy8oyr8xuewcl" path="res://Scenes/basic_shape-pass.tscn" id="8_jafar"]
 [ext_resource type="Texture2D" uid="uid://kf1hjp84qotb" path="res://art/bricks.png" id="9_pm1jk"]
+[ext_resource type="PackedScene" uid="uid://6gc7wl0472me" path="res://Scenes/spawner.tscn" id="12_pm1jk"]
 
 [sub_resource type="Gradient" id="Gradient_ffwbm"]
 offsets = PackedFloat32Array(1)
@@ -359,7 +360,7 @@ scale = Vector2(5.0482135, 4.8125)
 [node name="Enemys" type="Node2D" parent="." unique_id=2130850026]
 
 [node name="Enemy" parent="Enemys" unique_id=1239100787 instance=ExtResource("6_pm1jk")]
-position = Vector2(3415, 355)
+position = Vector2(3203, 449)
 
 [node name="Enemy2" parent="Enemys" unique_id=1471557545 instance=ExtResource("6_pm1jk")]
 position = Vector2(1223, 548)
@@ -407,3 +408,6 @@ position = Vector2(12982, -1584)
 
 [node name="Enemy11" parent="." unique_id=133980199 instance=ExtResource("6_pm1jk")]
 position = Vector2(14281, -1814)
+
+[node name="Spawner" parent="." unique_id=1308156847 instance=ExtResource("12_pm1jk")]
+position = Vector2(4893, 369)
