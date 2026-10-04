@@ -468,3 +468,5 @@ position = Vector2(2133, 398)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=478789029]
 stream = ExtResource("13_frdd2")
 autoplay = true
+
+[connection signal="body_entered" from="Label" to="Label" method="_on_body_entered"]

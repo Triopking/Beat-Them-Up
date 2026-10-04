@@ -66,8 +66,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("AttackR") and attack == false:
 		attack = true
 		print("right attack - ")
-		$Side2/CollisionShape2D.disabled = false
-		
 		
 		$AnimationPlayer.play("attackR")
 		await $AnimationPlayer.animation_finished
@@ -78,8 +76,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("AttackL") and attack == false:
 		attack = true
 		print("left attack - ")
-		$Side2/CollisionShape2D.disabled = false
-		
 		
 		$AnimationPlayer.play("attackL")
 		await $AnimationPlayer.animation_finished

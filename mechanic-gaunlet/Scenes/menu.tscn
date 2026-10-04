@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhjw8e40seg8q"]
 
 [ext_resource type="Script" uid="uid://cikk6bhthtqyi" path="res://Scripts/menu.gd" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://d1meqhko6bb51" path="res://art/title-screen-art.png" id="2_cayip"]
 [ext_resource type="Texture2D" uid="uid://bav12rrtwxdr7" path="res://art/game title.png" id="2_xhh6f"]
 
 [node name="Menu" type="Control" unique_id=512113670]
@@ -11,6 +12,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1rerr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1433328080]
+layout_mode = 0
+offset_right = 1146.6666
+offset_bottom = 645.0
+texture = ExtResource("2_cayip")
 
 [node name="Title" type="TextureRect" parent="." unique_id=91500960]
 layout_mode = 1
