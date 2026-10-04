@@ -46,7 +46,7 @@ sources/1 = SubResource("TileSetAtlasSource_dloay")
 sources/2 = SubResource("TileSetAtlasSource_12jxe")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myf5j"]
-size = Vector2(97, 86)
+size = Vector2(97, 657)
 
 [node name="First_Level" type="Node2D" unique_id=1223344096]
 
@@ -459,7 +459,7 @@ scale = Vector2(2.25, 1.984375)
 script = ExtResource("12_hm3q6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label" unique_id=512171037]
-position = Vector2(494.5, 515)
+position = Vector2(22324, 311)
 shape = SubResource("RectangleShape2D_myf5j")
 
 [node name="Basic Shape2" parent="." unique_id=295479867 instance=ExtResource("8_pwh16")]

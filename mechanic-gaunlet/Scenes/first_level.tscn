@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://cy8oyr8xuewcl" path="res://Scenes/basic_shape-pass.tscn" id="8_ffwbm"]
 [ext_resource type="Script" uid="uid://ctqwaq7w0drkh" path="res://Scenes/label.gd" id="12_ogcqi"]
 [ext_resource type="AudioStream" uid="uid://bcfaidd7aniub" path="res://Sounds/361054__jorge0000__wind-noise-hawk.wav" id="13_frdd2"]
-[ext_resource type="PackedScene" uid="uid://6gc7wl0472me" path="res://Scenes/spawner.tscn" id="14_5074t"]
 
 [sub_resource type="Gradient" id="Gradient_ffwbm"]
 offsets = PackedFloat32Array(1)
@@ -524,7 +523,19 @@ position = Vector2(16781, 382)
 [node name="Enemy22" parent="." unique_id=1946018813 instance=ExtResource("6_8tugf")]
 position = Vector2(17346, 369)
 
-[node name="Spawner" parent="." unique_id=1308156847 instance=ExtResource("14_5074t")]
-position = Vector2(14649, 77)
+[node name="Enemy23" parent="." unique_id=742230072 instance=ExtResource("6_8tugf")]
+position = Vector2(15610, 273)
+
+[node name="Enemy24" parent="." unique_id=398360209 instance=ExtResource("6_8tugf")]
+position = Vector2(15366, 316)
+
+[node name="Enemy25" parent="." unique_id=630933430 instance=ExtResource("6_8tugf")]
+position = Vector2(16397, 321)
+
+[node name="Enemy26" parent="." unique_id=2146277699 instance=ExtResource("6_8tugf")]
+position = Vector2(17223, 288)
+
+[node name="Enemy27" parent="." unique_id=740812077 instance=ExtResource("6_8tugf")]
+position = Vector2(16645, 352)
 
 [connection signal="body_entered" from="Label" to="Label" method="_on_body_entered"]
