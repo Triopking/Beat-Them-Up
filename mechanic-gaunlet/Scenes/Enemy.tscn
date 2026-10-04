@@ -1,54 +1,60 @@
 [gd_scene format=3 uid="uid://b3uvs3f3bdbsi"]
 
 [ext_resource type="Script" uid="uid://cc4epj26xnj85" path="res://Scripts/enemy.gd" id="1_wovta"]
-[ext_resource type="Texture2D" uid="uid://210u814suier" path="res://Assets/enemy1-spritesheet-base.png" id="2_wovta"]
-[ext_resource type="Texture2D" uid="uid://3vrqsc5u5nq7" path="res://Assets/enemy1-punch-base.png" id="2_xeo28"]
+[ext_resource type="Texture2D" uid="uid://dirb0a7ncktno" path="res://Assets/enemy1-punch.png" id="2_xeo28"]
+[ext_resource type="Texture2D" uid="uid://vi45kghc7mar" path="res://Assets/enemy1-walk.png" id="3_kpr8r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uihya"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeo28"]
 atlas = ExtResource("2_xeo28")
 region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1exfc"]
+atlas = ExtResource("2_xeo28")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo1ky"]
+atlas = ExtResource("2_xeo28")
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6bs3c"]
 atlas = ExtResource("2_xeo28")
-region = Rect2(0, 0, 64, 64)
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uoxpr"]
 atlas = ExtResource("2_xeo28")
-region = Rect2(64, 0, 64, 64)
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_idouy"]
 atlas = ExtResource("2_xeo28")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0o0ue"]
-atlas = ExtResource("2_xeo28")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6s1gy"]
-atlas = ExtResource("2_xeo28")
 region = Rect2(256, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xeo28"]
-atlas = ExtResource("2_wovta")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o0ue"]
+atlas = ExtResource("3_kpr8r")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kpr8r"]
-atlas = ExtResource("2_wovta")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s1gy"]
+atlas = ExtResource("3_kpr8r")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1exfc"]
-atlas = ExtResource("2_wovta")
+[sub_resource type="AtlasTexture" id="AtlasTexture_uihya"]
+atlas = ExtResource("3_kpr8r")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mo1ky"]
-atlas = ExtResource("2_wovta")
+[sub_resource type="AtlasTexture" id="AtlasTexture_27ry8"]
+atlas = ExtResource("3_kpr8r")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ie3n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uihya")
+"texture": SubResource("AtlasTexture_xeo28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1exfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo1ky")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6bs3c")
@@ -58,12 +64,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_idouy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0o0ue")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6s1gy")
 }],
 "loop": 0,
 "name": &"attack",
@@ -71,16 +71,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xeo28")
+"texture": SubResource("AtlasTexture_0o0ue")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kpr8r")
+"texture": SubResource("AtlasTexture_6s1gy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1exfc")
+"texture": SubResource("AtlasTexture_uihya")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mo1ky")
+"texture": SubResource("AtlasTexture_27ry8")
 }],
 "loop": 1,
 "name": &"walk",
@@ -121,10 +121,74 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Icon:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_1exfc"]
+resource_name = "attackL"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334, 0.5, 0.6666666, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
 
 [sub_resource type="Animation" id="Animation_kpr8r"]
 resource_name = "attackR"
-length = 2.0
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -136,6 +200,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Icon:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_xeo28"]
@@ -158,6 +246,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kpr8r"]
 _data = {
 &"RESET": SubResource("Animation_wovta"),
+&"attackL": SubResource("Animation_1exfc"),
 &"attackR": SubResource("Animation_kpr8r"),
 &"vulnerable": SubResource("Animation_xeo28")
 }
@@ -178,15 +267,16 @@ texture_filter = 1
 position = Vector2(1.9999952, -4.5000076)
 scale = Vector2(3.9375002, 2.109375)
 sprite_frames = SubResource("SpriteFrames_8ie3n")
-animation = &"walk"
+animation = &"attack"
 autoplay = "walk"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=569315751]
 shape = SubResource("CapsuleShape2D_8ie3n")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=203179390 groups=["enemy", "player"]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1009945780]
 position = Vector2(0, -3)
@@ -204,12 +294,12 @@ collision_mask = 3
 position = Vector2(-26, -46)
 enabled = false
 target_position = Vector2(-16, 0)
-collision_mask = 3
+collision_mask = 11
 
 [node name="LeftMiddle" type="RayCast2D" parent="Raycasts" unique_id=2076948259]
 position = Vector2(-26, 0)
 target_position = Vector2(-16, 0)
-collision_mask = 3
+collision_mask = 11
 collide_with_areas = true
 collide_with_bodies = false
 
@@ -229,7 +319,7 @@ collision_mask = 3
 position = Vector2(26, 0)
 rotation = -3.1415925
 target_position = Vector2(-16, 2.415933e-06)
-collision_mask = 3
+collision_mask = 11
 collide_with_areas = true
 collide_with_bodies = false
 
@@ -262,6 +352,8 @@ position = Vector2(60, 0)
 shape = SubResource("RectangleShape2D_flbuq")
 disabled = true
 debug_color = Color(0.86817783, 0.35358018, 5.7756904e-07, 0.41960785)
+
+[node name="AttackDelay" type="Timer" parent="." unique_id=1801260790]
 
 [connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="timeout" from="Invincibility" to="." method="_on_invincibility_timeout"]

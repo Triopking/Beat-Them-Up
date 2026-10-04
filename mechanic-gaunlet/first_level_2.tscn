@@ -88,8 +88,6 @@ texture = ExtResource("3_gsdjy")
 [node name="Player" parent="." unique_id=1843922582 instance=ExtResource("2_jafar")]
 top_level = true
 position = Vector2(-338, 448)
-collision_layer = 7
-collision_mask = 7
 
 [node name="Basic Shape" parent="." unique_id=115887287 instance=ExtResource("1_sxkk1")]
 position = Vector2(3515.0002, 1168.5)
@@ -130,7 +128,6 @@ tile_map_data = PackedByteArray("AAAQAAQAAQAAAAAAAAARAAQAAQAAAAAAAAASAAQAAQAAAAA
 tile_set = SubResource("TileSet_myf5j")
 
 [node name="World" type="Node2D" parent="." unique_id=1916299635]
-visible = false
 
 [node name="Basic Shape2" parent="World" unique_id=391385206 instance=ExtResource("1_sxkk1")]
 position = Vector2(1438.2501, -96)
@@ -187,7 +184,7 @@ rotation = 3.1415927
 scale = Vector2(0.45643443, -6.7443366)
 
 [node name="Basic Shape18" parent="World" unique_id=934829120 instance=ExtResource("8_jafar")]
-position = Vector2(995.00024, 483)
+position = Vector2(1025, 461)
 rotation = 3.1415927
 scale = Vector2(0.45643443, -6.7443366)
 

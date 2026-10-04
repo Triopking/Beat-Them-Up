@@ -19,6 +19,7 @@ var health = 2
 
 #timers
 @onready var invincibility: Timer = $Invincibility
+@onready var attack_delay: Timer = $AttackDelay
 
 
 
@@ -74,25 +75,32 @@ func _physics_process(delta: float) -> void:
 		invincibility.start()
 	
 	if target_right == true:
-		animation()
+		print("start")
+		$AnimationPlayer.play("attackR")
+		print("he")
+		await $AnimationPlayer.animation_finished
+		target_right = false
+	if target_left == true:
+		print("start")
+		$AnimationPlayer.play("attackL")
+		print("he")
+		await $AnimationPlayer.animation_finished
+		target_right = false
 	
 	#when the raycasts on the left detect something, it would switch directions
-	if not left_down.is_colliding() or leftup.is_colliding() or left_middle.is_colliding():
+	if not left_down.is_colliding() or left_middle.is_colliding():
 		direction = 1
 		$FightRight/Right.disabled = false
 		$FightLeft/Left.disabled = true
 		$Icon.flip_h = false
 	
-	elif not right_down.is_colliding() or rightup.is_colliding() or right_middle.is_colliding():
+	elif not right_down.is_colliding() or right_middle.is_colliding():
 		direction = -1
 		$FightRight/Right.disabled = true
 		$FightLeft/Left.disabled = false
 		$Icon.flip_h = true
 	
-	
-	
-	#this is for receiving player attacks
-	
+	$Icon.play("walk")
 	velocity.x = direction * SPEED * delta
 	
 	move_and_slide()
@@ -134,6 +142,3 @@ func _on_fight_right_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		target_right = false
 	
-func animation():
-	$AnimationPlayer.play("attackR")
-	await $AnimationPlayer.animation_finished
