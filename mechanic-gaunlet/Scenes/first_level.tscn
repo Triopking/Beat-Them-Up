@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cy8oyr8xuewcl" path="res://Scenes/basic_shape-pass.tscn" id="8_ffwbm"]
 [ext_resource type="Script" uid="uid://ctqwaq7w0drkh" path="res://Scenes/label.gd" id="12_ogcqi"]
 [ext_resource type="AudioStream" uid="uid://bcfaidd7aniub" path="res://Sounds/361054__jorge0000__wind-noise-hawk.wav" id="13_frdd2"]
+[ext_resource type="PackedScene" uid="uid://6gc7wl0472me" path="res://Scenes/spawner.tscn" id="14_5074t"]
 
 [sub_resource type="Gradient" id="Gradient_ffwbm"]
 offsets = PackedFloat32Array(1)
@@ -46,7 +47,7 @@ sources/1 = SubResource("TileSetAtlasSource_dloay")
 sources/2 = SubResource("TileSetAtlasSource_12jxe")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myf5j"]
-size = Vector2(97, 86)
+size = Vector2(97, 1559)
 
 [node name="First_Level" type="Node2D" unique_id=1223344096]
 
@@ -318,8 +319,8 @@ position = Vector2(16096, -1568)
 scale = Vector2(49, 3)
 
 [node name="Basic Shape47" parent="World" unique_id=1286841798 instance=ExtResource("1_fu4at")]
-position = Vector2(18240.5, -960)
-scale = Vector2(11.984401, 46)
+position = Vector2(18784.5, -960)
+scale = Vector2(28.984398, 46)
 
 [node name="Basic Shape48" parent="World" unique_id=2003214327 instance=ExtResource("1_fu4at")]
 position = Vector2(16352.5, -1056)
@@ -459,7 +460,7 @@ scale = Vector2(2.25, 1.984375)
 script = ExtResource("12_ogcqi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label" unique_id=512171037]
-position = Vector2(494.5, 515)
+position = Vector2(21963, -67.5)
 shape = SubResource("RectangleShape2D_myf5j")
 
 [node name="Basic Shape2" parent="." unique_id=295479867 instance=ExtResource("8_ffwbm")]
@@ -468,5 +469,62 @@ position = Vector2(2133, 398)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=478789029]
 stream = ExtResource("13_frdd2")
 autoplay = true
+
+[node name="Enemy5" parent="." unique_id=134776110 instance=ExtResource("6_8tugf")]
+position = Vector2(14842, -793)
+
+[node name="Enemy6" parent="." unique_id=1015222266 instance=ExtResource("6_8tugf")]
+position = Vector2(15217, -789)
+
+[node name="Enemy7" parent="." unique_id=55669152 instance=ExtResource("6_8tugf")]
+position = Vector2(15956, -721)
+
+[node name="Enemy8" parent="." unique_id=977776291 instance=ExtResource("6_8tugf")]
+position = Vector2(16457, -758)
+
+[node name="Enemy9" parent="." unique_id=640931485 instance=ExtResource("6_8tugf")]
+position = Vector2(15646, -748)
+
+[node name="Enemy10" parent="." unique_id=192326645 instance=ExtResource("6_8tugf")]
+position = Vector2(16965, -720)
+
+[node name="Enemy11" parent="." unique_id=758979592 instance=ExtResource("6_8tugf")]
+position = Vector2(17422, -693)
+
+[node name="Enemy12" parent="." unique_id=1608814270 instance=ExtResource("6_8tugf")]
+position = Vector2(14854, -226)
+
+[node name="Enemy13" parent="." unique_id=348618830 instance=ExtResource("6_8tugf")]
+position = Vector2(15144, -248)
+
+[node name="Enemy14" parent="." unique_id=1055006289 instance=ExtResource("6_8tugf")]
+position = Vector2(15608, -267)
+
+[node name="Enemy15" parent="." unique_id=2048175432 instance=ExtResource("6_8tugf")]
+position = Vector2(15871, -236)
+
+[node name="Enemy16" parent="." unique_id=1664632924 instance=ExtResource("6_8tugf")]
+position = Vector2(16393, -183)
+
+[node name="Enemy17" parent="." unique_id=1135618388 instance=ExtResource("6_8tugf")]
+position = Vector2(17214, -200)
+
+[node name="Enemy18" parent="." unique_id=190311080 instance=ExtResource("6_8tugf")]
+position = Vector2(14853, 484)
+
+[node name="Enemy19" parent="." unique_id=1425873026 instance=ExtResource("6_8tugf")]
+position = Vector2(15278, 491)
+
+[node name="Enemy20" parent="." unique_id=1916938365 instance=ExtResource("6_8tugf")]
+position = Vector2(15906, 394)
+
+[node name="Enemy21" parent="." unique_id=539207552 instance=ExtResource("6_8tugf")]
+position = Vector2(16781, 382)
+
+[node name="Enemy22" parent="." unique_id=1946018813 instance=ExtResource("6_8tugf")]
+position = Vector2(17346, 369)
+
+[node name="Spawner" parent="." unique_id=1308156847 instance=ExtResource("14_5074t")]
+position = Vector2(14649, 77)
 
 [connection signal="body_entered" from="Label" to="Label" method="_on_body_entered"]
