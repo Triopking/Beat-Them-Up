@@ -184,7 +184,7 @@ rotation = 3.1415927
 scale = Vector2(0.45643443, -6.7443366)
 
 [node name="Basic Shape18" parent="World" unique_id=934829120 instance=ExtResource("8_ffwbm")]
-position = Vector2(995.00024, 483)
+position = Vector2(1025, 461)
 rotation = 3.1415927
 scale = Vector2(0.45643443, -6.7443366)
 
