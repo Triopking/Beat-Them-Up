@@ -75,13 +75,13 @@ func _physics_process(delta: float) -> void:
 		current_inv = true
 		invincibility.start()
 	
-	if target_right == true:
+	if target_right == true and health <= 0:
 		
 		$AnimationPlayer.play("attackR")
 		
 		await $AnimationPlayer.animation_finished
 		target_right = false
-	if target_left == true:
+	if target_left == true and health <= 0:
 		
 		$AnimationPlayer.play("attackL")
 		
